@@ -1,0 +1,84 @@
+﻿@model SIMPEDA_V01.Models.Dosen
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Dosen</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NIP, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NIP)
+                @Html.ValidationMessageFor(model => model.NIP)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.idJurusan, "idJurusan", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("idJurusan", String.Empty)
+                @Html.ValidationMessageFor(model => model.idJurusan)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.namaDosen, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.namaDosen)
+                @Html.ValidationMessageFor(model => model.namaDosen)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.teleponDosen, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.teleponDosen)
+                @Html.ValidationMessageFor(model => model.teleponDosen)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.alamatDosen, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.alamatDosen)
+                @Html.ValidationMessageFor(model => model.alamatDosen)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.emailDosen, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.emailDosen)
+                @Html.ValidationMessageFor(model => model.emailDosen)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.poinPunishmentDosen, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.poinPunishmentDosen)
+                @Html.ValidationMessageFor(model => model.poinPunishmentDosen)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

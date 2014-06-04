@@ -1,0 +1,63 @@
+﻿@model IEnumerable<SIMPEDA_V01.Models.Mahasiswa>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.namaMhs)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.teleponMhs)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.alamatMhs)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.emailMhs)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.poinPunishmentMhs)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JurusanInstansi.namaJurusan)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.namaMhs)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.teleponMhs)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.alamatMhs)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.emailMhs)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.poinPunishmentMhs)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JurusanInstansi.namaJurusan)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.NRP }) |
+            @Html.ActionLink("Details", "Details", new { id=item.NRP }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.NRP })
+        </td>
+    </tr>
+}
+
+</table>

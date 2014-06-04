@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7c66996730f544efacd2339acacc8a17" Name="Diagram1">
+        <EntityTypeShape EntityType="SimpedaModel.Dosen" Width="1.5" PointX="3" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SimpedaModel.JurusanInstansi" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SimpedaModel.Mahasiswa" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SimpedaModel.Pegawai" Width="1.5" PointX="3" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SimpedaModel.Sepeda" Width="1.5" PointX="3" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SimpedaModel.Shelter" Width="1.5" PointX="0.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SimpedaModel.Transaksi" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
+        <AssociationConnector Association="SimpedaModel.FK_Dosen_JurusanInstansi" ManuallyRouted="false" />
+        <AssociationConnector Association="SimpedaModel.FK_Transaksi_Dosen1" ManuallyRouted="false" />
+        <AssociationConnector Association="SimpedaModel.FK_Mahasiswa_JurusanInstansi" ManuallyRouted="false" />
+        <AssociationConnector Association="SimpedaModel.FK_Pegawai_JurusanInstansi" ManuallyRouted="false" />
+        <AssociationConnector Association="SimpedaModel.FK_Transaksi_Mahasiswa" ManuallyRouted="false" />
+        <AssociationConnector Association="SimpedaModel.FK_Transaksi_Pegawai" ManuallyRouted="false" />
+        <AssociationConnector Association="SimpedaModel.FK_Sepeda_Shelter" ManuallyRouted="false" />
+        <AssociationConnector Association="SimpedaModel.FK_Transaksi_Sepeda" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

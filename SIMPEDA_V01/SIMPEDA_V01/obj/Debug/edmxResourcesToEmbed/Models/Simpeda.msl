@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SimpedaModelStoreContainer" CdmEntityContainer="SimpedaEntities">
+    <EntitySetMapping Name="Dosens">
+      <EntityTypeMapping TypeName="SimpedaModel.Dosen">
+        <MappingFragment StoreEntitySet="Dosen">
+          <ScalarProperty Name="NIP" ColumnName="NIP" />
+          <ScalarProperty Name="idJurusan" ColumnName="idJurusan" />
+          <ScalarProperty Name="namaDosen" ColumnName="namaDosen" />
+          <ScalarProperty Name="teleponDosen" ColumnName="teleponDosen" />
+          <ScalarProperty Name="alamatDosen" ColumnName="alamatDosen" />
+          <ScalarProperty Name="emailDosen" ColumnName="emailDosen" />
+          <ScalarProperty Name="poinPunishmentDosen" ColumnName="poinPunishmentDosen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JurusanInstansis">
+      <EntityTypeMapping TypeName="SimpedaModel.JurusanInstansi">
+        <MappingFragment StoreEntitySet="JurusanInstansi">
+          <ScalarProperty Name="idJurusan" ColumnName="idJurusan" />
+          <ScalarProperty Name="namaJurusan" ColumnName="namaJurusan" />
+          <ScalarProperty Name="alamatJurusan" ColumnName="alamatJurusan" />
+          <ScalarProperty Name="teleponJurusan" ColumnName="teleponJurusan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mahasiswas">
+      <EntityTypeMapping TypeName="SimpedaModel.Mahasiswa">
+        <MappingFragment StoreEntitySet="Mahasiswa">
+          <ScalarProperty Name="NRP" ColumnName="NRP" />
+          <ScalarProperty Name="idJurusan" ColumnName="idJurusan" />
+          <ScalarProperty Name="namaMhs" ColumnName="namaMhs" />
+          <ScalarProperty Name="teleponMhs" ColumnName="teleponMhs" />
+          <ScalarProperty Name="alamatMhs" ColumnName="alamatMhs" />
+          <ScalarProperty Name="emailMhs" ColumnName="emailMhs" />
+          <ScalarProperty Name="poinPunishmentMhs" ColumnName="poinPunishmentMhs" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pegawais">
+      <EntityTypeMapping TypeName="SimpedaModel.Pegawai">
+        <MappingFragment StoreEntitySet="Pegawai">
+          <ScalarProperty Name="idPegawai" ColumnName="idPegawai" />
+          <ScalarProperty Name="idJurusan" ColumnName="idJurusan" />
+          <ScalarProperty Name="namaPegawai" ColumnName="namaPegawai" />
+          <ScalarProperty Name="jabatan" ColumnName="jabatan" />
+          <ScalarProperty Name="teleponPegawai" ColumnName="teleponPegawai" />
+          <ScalarProperty Name="alamatPegawai" ColumnName="alamatPegawai" />
+          <ScalarProperty Name="emailPegawai" ColumnName="emailPegawai" />
+          <ScalarProperty Name="poinPunishmetPegawai" ColumnName="poinPunishmetPegawai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sepedas">
+      <EntityTypeMapping TypeName="SimpedaModel.Sepeda">
+        <MappingFragment StoreEntitySet="Sepeda">
+          <ScalarProperty Name="idSepeda" ColumnName="idSepeda" />
+          <ScalarProperty Name="idShelter" ColumnName="idShelter" />
+          <ScalarProperty Name="merkSepeda" ColumnName="merkSepeda" />
+          <ScalarProperty Name="warnaSepeda" ColumnName="warnaSepeda" />
+          <ScalarProperty Name="ketersediaan" ColumnName="ketersediaan" />
+          <ScalarProperty Name="keterangan" ColumnName="keterangan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shelters">
+      <EntityTypeMapping TypeName="SimpedaModel.Shelter">
+        <MappingFragment StoreEntitySet="Shelter">
+          <ScalarProperty Name="idShelter" ColumnName="idShelter" />
+          <ScalarProperty Name="lokasiShelter" ColumnName="lokasiShelter" />
+          <ScalarProperty Name="deskripsiShelter" ColumnName="deskripsiShelter" />
+          <ScalarProperty Name="fotoshelter" ColumnName="fotoshelter" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Transaksis">
+      <EntityTypeMapping TypeName="SimpedaModel.Transaksi">
+        <MappingFragment StoreEntitySet="Transaksi">
+          <ScalarProperty Name="idTransaksi" ColumnName="idTransaksi" />
+          <ScalarProperty Name="idPeminjamDosen" ColumnName="idPeminjamDosen" />
+          <ScalarProperty Name="idPeminjamPegawai" ColumnName="idPeminjamPegawai" />
+          <ScalarProperty Name="idPeminjamMhs" ColumnName="idPeminjamMhs" />
+          <ScalarProperty Name="idSepeda" ColumnName="idSepeda" />
+          <ScalarProperty Name="waktuPinjam" ColumnName="waktuPinjam" />
+          <ScalarProperty Name="waktuKembali" ColumnName="waktuKembali" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="shelterKembali" ColumnName="shelterKembali" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

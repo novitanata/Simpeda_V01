@@ -1,0 +1,66 @@
+﻿@model SIMPEDA_V01.Models.Dosen
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Dosen</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.namaDosen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.namaDosen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.teleponDosen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.teleponDosen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.alamatDosen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.alamatDosen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.emailDosen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.emailDosen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.poinPunishmentDosen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.poinPunishmentDosen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JurusanInstansi.namaJurusan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JurusanInstansi.namaJurusan)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.NIP }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

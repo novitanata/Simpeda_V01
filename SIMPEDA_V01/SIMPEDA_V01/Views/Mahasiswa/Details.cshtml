@@ -1,0 +1,66 @@
+﻿@model SIMPEDA_V01.Models.Mahasiswa
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Mahasiswa</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.namaMhs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.namaMhs)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.teleponMhs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.teleponMhs)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.alamatMhs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.alamatMhs)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.emailMhs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.emailMhs)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.poinPunishmentMhs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.poinPunishmentMhs)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JurusanInstansi.namaJurusan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JurusanInstansi.namaJurusan)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.NRP }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
