@@ -1,0 +1,86 @@
+﻿@using SIMPEDA_V01.Models
+@model SIMPEDA_V01.Models.Transaksi
+
+@{
+    ViewBag.Title = "Create";
+}
+<br/><br/><br/><br/><br/>
+<h2>Tambah</h2>
+
+@using (Html.BeginForm())
+{
+     @Html.AntiForgeryToken() 
+    <div class="form-horizontal">
+        <h4>Transaksi</h4>
+        <hr />
+      
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.idTransaksi, new {@class = "control-label col-md-2"})
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.idTransaksi,new { @Value=ViewBag.idTransaksi})
+                @Html.ValidationMessageFor(model => model.idTransaksi)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.idPeminjamMhs, "idPeminjamMhs", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("idPeminjamMhs", String.Empty)
+                @Html.ValidationMessageFor(model => model.idPeminjamMhs)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.idSepeda, "idSepeda", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("idSepeda", String.Empty)
+
+                @Html.ValidationMessageFor(model => model.idSepeda)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.waktuPinjam, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.waktuPinjam, new { @Value=ViewBag.tanggal})
+                @Html.ValidationMessageFor(model => model.waktuPinjam)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.waktuKembali, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.waktuKembali)
+                @Html.ValidationMessageFor(model => model.waktuKembali)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.status, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.RadioButtonFor(model => model.status ,true)
+                @Html.ValidationMessageFor(model => model.status)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.shelterKembali, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.shelterKembali)
+                @Html.ValidationMessageFor(model => model.shelterKembali)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

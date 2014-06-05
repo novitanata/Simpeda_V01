@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="SimpedaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="SimpedaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Dosen">
           <Key>
             <PropertyRef Name="NIP" />
@@ -82,7 +82,7 @@
           <Property Name="idSepeda" Type="int" Nullable="false" />
           <Property Name="waktuPinjam" Type="datetime" />
           <Property Name="waktuKembali" Type="datetime" />
-          <Property Name="status" Type="smallint" Nullable="false" />
+          <Property Name="status" Type="int" Nullable="false" />
           <Property Name="shelterKembali" Type="int" />
         </EntityType>
         <Association Name="FK_Dosen_JurusanInstansi">
@@ -181,6 +181,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="GetNewIdTransaction" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="SimpedaModelStoreContainer">
           <EntitySet Name="Dosen" EntityType="Self.Dosen" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="JurusanInstansi" EntityType="Self.JurusanInstansi" Schema="dbo" store:Type="Tables" />
@@ -222,8 +223,7 @@
             <End Role="Transaksi" EntitySet="Transaksi" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="SimpedaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -459,6 +459,7 @@
             <End Role="Sepeda" EntitySet="Sepedas" />
             <End Role="Transaksi" EntitySet="Transaksis" />
           </AssociationSet>
+          <FunctionImport Name="GetNewIdTransaction" ReturnType="Collection(Int32)" />
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
@@ -553,6 +554,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="GetNewIdTransaction" FunctionName="SimpedaModel.Store.GetNewIdTransaction" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

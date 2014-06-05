@@ -1,0 +1,56 @@
+﻿@using SIMPEDA_V01.Controllers
+@model IEnumerable<SIMPEDA_V01.Models.Sepeda>
+
+<br/><br/>
+@{
+    ViewBag.Title = "Shelter";
+}
+
+<br/><br/><br/>
+<h2>Shelter @ViewBag.idShelter </h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Merk Sepeda
+        </th>
+        <th>
+            Warna Sepeda
+        </th>
+        <th>
+           Status Tersedia
+        </th>
+        <th>
+           Keterangan
+        </th>
+        <th>
+           Lokasi 
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.merkSepeda)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.warnaSepeda)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ketersediaan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.keterangan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Shelter.lokasiShelter)
+        </td>
+        <td>
+            <input type="submit" value="Details" class="btn btn-default" onclick="location.href='@Url.Action("Details","Sepeda",new{id=item.idSepeda})'" />
+            <input type="submit" value="Pinjam" id="@ViewBag.idSepeda" class="btn btn-default" onclick="location.href='@Url.Action("Create","Transaksi",new{id=item.idSepeda})'" />
+        </td>
+    </tr>
+}
+
+</table>
