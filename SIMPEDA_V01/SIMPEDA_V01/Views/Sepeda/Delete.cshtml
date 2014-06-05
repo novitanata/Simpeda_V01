@@ -1,0 +1,64 @@
+﻿@model SIMPEDA_V01.Models.Sepeda
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Sepeda</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.merkSepeda)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.merkSepeda)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.warnaSepeda)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.warnaSepeda)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ketersediaan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ketersediaan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.keterangan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.keterangan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Shelter.lokasiShelter)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Shelter.lokasiShelter)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

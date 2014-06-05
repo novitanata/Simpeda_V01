@@ -12,6 +12,8 @@ namespace SIMPEDA_V01.Models
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class SimpedaEntities : DbContext
     {
@@ -32,5 +34,10 @@ namespace SIMPEDA_V01.Models
         public virtual DbSet<Sepeda> Sepedas { get; set; }
         public virtual DbSet<Shelter> Shelters { get; set; }
         public virtual DbSet<Transaksi> Transaksis { get; set; }
+    
+        public virtual ObjectResult<Nullable<int>> GetNewIdTransaction()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("GetNewIdTransaction");
+        }
     }
 }

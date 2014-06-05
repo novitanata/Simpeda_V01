@@ -1,0 +1,76 @@
+﻿@model SIMPEDA_V01.Models.Sepeda
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Sepeda</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.idSepeda, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.idSepeda)
+                @Html.ValidationMessageFor(model => model.idSepeda)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.idShelter, "idShelter", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("idShelter", String.Empty)
+                @Html.ValidationMessageFor(model => model.idShelter)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.merkSepeda, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.merkSepeda)
+                @Html.ValidationMessageFor(model => model.merkSepeda)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.warnaSepeda, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.warnaSepeda)
+                @Html.ValidationMessageFor(model => model.warnaSepeda)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ketersediaan, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ketersediaan)
+                @Html.ValidationMessageFor(model => model.ketersediaan)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.keterangan, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.keterangan)
+                @Html.ValidationMessageFor(model => model.keterangan)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

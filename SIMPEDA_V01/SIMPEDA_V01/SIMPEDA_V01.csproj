@@ -153,6 +153,8 @@
     <Compile Include="Controllers\DosenController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MahasiswaController.cs" />
+    <Compile Include="Controllers\SepedaController.cs" />
+    <Compile Include="Controllers\TransaksiController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -228,6 +230,17 @@
     <Content Include="Views\Dosen\Details.cshtml" />
     <Content Include="Views\Dosen\Edit.cshtml" />
     <Content Include="Views\Dosen\Index.cshtml" />
+    <Content Include="Views\Sepeda\Create.cshtml" />
+    <Content Include="Views\Sepeda\Delete.cshtml" />
+    <Content Include="Views\Sepeda\Details.cshtml" />
+    <Content Include="Views\Sepeda\Edit.cshtml" />
+    <Content Include="Views\Sepeda\Index.cshtml" />
+    <Content Include="Views\Sepeda\SepedaShelter.cshtml" />
+    <Content Include="Views\Transaksi\Create.cshtml" />
+    <Content Include="Views\Transaksi\Delete.cshtml" />
+    <Content Include="Views\Transaksi\Details.cshtml" />
+    <Content Include="Views\Transaksi\Edit.cshtml" />
+    <Content Include="Views\Transaksi\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

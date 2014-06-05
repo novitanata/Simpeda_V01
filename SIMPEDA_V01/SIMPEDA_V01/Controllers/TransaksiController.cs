@@ -17,6 +17,7 @@ namespace SIMPEDA_V01.Controllers
         // GET: /Transaksi/
         public ActionResult Index()
         {
+            
             var transaksis = db.Transaksis.Include(t => t.Dosen).Include(t => t.Mahasiswa).Include(t => t.Pegawai).Include(t => t.Sepeda);
             return View(transaksis.ToList());
         }

@@ -1,0 +1,58 @@
+﻿@model SIMPEDA_V01.Models.Sepeda
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Sepeda</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.merkSepeda)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.merkSepeda)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.warnaSepeda)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.warnaSepeda)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ketersediaan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ketersediaan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.keterangan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.keterangan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Shelter.lokasiShelter)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Shelter.lokasiShelter)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idSepeda }) |
+    @Html.ActionLink("Back to List", "SepedaShelter", "Sepeda", new{id=Model.idShelter})
+</p>

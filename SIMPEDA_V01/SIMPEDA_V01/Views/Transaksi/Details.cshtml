@@ -1,0 +1,82 @@
+﻿@model SIMPEDA_V01.Models.Transaksi
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Transaksi</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.waktuPinjam)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.waktuPinjam)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.waktuKembali)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.waktuKembali)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.shelterKembali)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.shelterKembali)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dosen.namaDosen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dosen.namaDosen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mahasiswa.namaMhs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mahasiswa.namaMhs)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pegawai.namaPegawai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pegawai.namaPegawai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sepeda.merkSepeda)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sepeda.merkSepeda)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idTransaksi }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

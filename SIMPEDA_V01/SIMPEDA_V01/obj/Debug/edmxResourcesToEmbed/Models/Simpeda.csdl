@@ -232,5 +232,6 @@
       <End Role="Sepeda" EntitySet="Sepedas" />
       <End Role="Transaksi" EntitySet="Transaksis" />
     </AssociationSet>
+    <FunctionImport Name="GetNewIdTransaction" ReturnType="Collection(Int32)" />
   </EntityContainer>
 </Schema>
