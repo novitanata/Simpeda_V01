@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
+using System.Security.Cryptography;
 using System.Web;
 using System.Web.Mvc;
 using SIMPEDA_V01.Models;
@@ -38,14 +39,18 @@ namespace SIMPEDA_V01.Controllers
         }
 
         // GET: /Transaksi/Create
-        public ActionResult Create()
+        public ActionResult Create(int idShelter, int idSepeda)
         {
             ViewBag.idPeminjamDosen = new SelectList(db.Dosens, "NIP", "namaDosen");
             ViewBag.idPeminjamMhs = new SelectList(db.Mahasiswas, "NRP", "namaMhs");
             ViewBag.idPeminjamPegawai = new SelectList(db.Pegawais, "idPegawai", "namaPegawai");
-            ViewBag.idSepeda = new SelectList(db.Sepedas, "idSepeda", "merkSepeda");
-            int newId = (int)db.GetNewIdTransaction().FirstOrDefault();
-
+            ViewBag.idSepeda = (from s in db.Sepedas
+                               where s.idShelter.Equals(idShelter) && s.idSepeda.Equals(idSepeda)
+                               select s.idSepeda).FirstOrDefault();
+            var idTransaksi = (from t in db.Transaksis
+                                select t.idTransaksi).Max();
+            int newId = idTransaksi + 1;
+           //int newId = (int)db.GetNewIdTransaction().FirstOrDefault()
             ViewBag.idTransaksi = newId;
             ViewBag.tanggal = DateTime.Now;
             ViewBag.status = false;

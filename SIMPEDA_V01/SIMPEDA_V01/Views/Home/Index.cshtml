@@ -75,7 +75,15 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <h2>Shelter</h2>
+                        @{ bool IsSection = true; }
+                        @if (IsSection)
+                        {
+                            <h2>Shelter</h2>
+                        }
+                            else
+                        {
+                            <h2>Peminjaman</h2>
+                        }
                         <hr class="star-primary">
                     </div>
                 </div>

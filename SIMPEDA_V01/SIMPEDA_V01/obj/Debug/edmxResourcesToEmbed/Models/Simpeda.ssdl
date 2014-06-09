@@ -11,6 +11,8 @@
     <Property Name="alamatDosen" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="emailDosen" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="poinPunishmentDosen" Type="int" />
+    <Property Name="barcodeImageDosen" Type="varchar(max)" />
+    <Property Name="barcodeDosen" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="JurusanInstansi">
     <Key>
@@ -32,6 +34,8 @@
     <Property Name="alamatMhs" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="emailMhs" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="poinPunishmentMhs" Type="int" />
+    <Property Name="barcodeImageMhs" Type="varchar(max)" />
+    <Property Name="barcodeMhs" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="Pegawai">
     <Key>
@@ -45,6 +49,8 @@
     <Property Name="alamatPegawai" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="emailPegawai" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="poinPunishmetPegawai" Type="int" />
+    <Property Name="barcodeImagePegawai" Type="varchar(max)" />
+    <Property Name="barcodePegawai" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="Sepeda">
     <Key>
@@ -176,6 +182,12 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Function Name="GetLokasiShelter" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idShelter" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetNamaShelter" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idShelter" Type="int" Mode="In" />
+  </Function>
   <Function Name="GetNewIdTransaction" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <EntityContainer Name="SimpedaModelStoreContainer">
     <EntitySet Name="Dosen" EntityType="Self.Dosen" Schema="dbo" store:Type="Tables" />

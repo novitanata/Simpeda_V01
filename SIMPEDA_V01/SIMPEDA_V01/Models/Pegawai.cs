@@ -27,6 +27,8 @@ namespace SIMPEDA_V01.Models
         public string alamatPegawai { get; set; }
         public string emailPegawai { get; set; }
         public Nullable<int> poinPunishmetPegawai { get; set; }
+        public string barcodeImagePegawai { get; set; }
+        public string barcodePegawai { get; set; }
     
         public virtual JurusanInstansi JurusanInstansi { get; set; }
         public virtual ICollection<Transaksi> Transaksis { get; set; }

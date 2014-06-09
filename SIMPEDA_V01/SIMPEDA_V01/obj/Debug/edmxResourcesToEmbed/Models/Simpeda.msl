@@ -4,6 +4,8 @@
     <EntitySetMapping Name="Dosens">
       <EntityTypeMapping TypeName="SimpedaModel.Dosen">
         <MappingFragment StoreEntitySet="Dosen">
+          <ScalarProperty Name="barcodeDosen" ColumnName="barcodeDosen" />
+          <ScalarProperty Name="barcodeImageDosen" ColumnName="barcodeImageDosen" />
           <ScalarProperty Name="NIP" ColumnName="NIP" />
           <ScalarProperty Name="idJurusan" ColumnName="idJurusan" />
           <ScalarProperty Name="namaDosen" ColumnName="namaDosen" />
@@ -27,6 +29,8 @@
     <EntitySetMapping Name="Mahasiswas">
       <EntityTypeMapping TypeName="SimpedaModel.Mahasiswa">
         <MappingFragment StoreEntitySet="Mahasiswa">
+          <ScalarProperty Name="barcodeMhs" ColumnName="barcodeMhs" />
+          <ScalarProperty Name="barcodeImageMhs" ColumnName="barcodeImageMhs" />
           <ScalarProperty Name="NRP" ColumnName="NRP" />
           <ScalarProperty Name="idJurusan" ColumnName="idJurusan" />
           <ScalarProperty Name="namaMhs" ColumnName="namaMhs" />
@@ -40,6 +44,8 @@
     <EntitySetMapping Name="Pegawais">
       <EntityTypeMapping TypeName="SimpedaModel.Pegawai">
         <MappingFragment StoreEntitySet="Pegawai">
+          <ScalarProperty Name="barcodePegawai" ColumnName="barcodePegawai" />
+          <ScalarProperty Name="barcodeImagePegawai" ColumnName="barcodeImagePegawai" />
           <ScalarProperty Name="idPegawai" ColumnName="idPegawai" />
           <ScalarProperty Name="idJurusan" ColumnName="idJurusan" />
           <ScalarProperty Name="namaPegawai" ColumnName="namaPegawai" />
@@ -89,5 +95,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <FunctionImportMapping FunctionImportName="GetNewIdTransaction" FunctionName="SimpedaModel.Store.GetNewIdTransaction" />
+    <FunctionImportMapping FunctionImportName="GetLokasiShelter" FunctionName="SimpedaModel.Store.GetLokasiShelter" />
+    <FunctionImportMapping FunctionImportName="GetNamaShelter" FunctionName="SimpedaModel.Store.GetNamaShelter" />
   </EntityContainerMapping>
 </Mapping>

@@ -64,10 +64,8 @@
         <td>
             @Html.DisplayFor(modelItem => item.Sepeda.merkSepeda)
         </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.idTransaksi }) |
-            @Html.ActionLink("Details", "Details", new { id=item.idTransaksi }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.idTransaksi })
+        <td>     
+            @Html.ActionLink("Details", "Details", new { id=item.idTransaksi })       
         </td>
     </tr>
 }

@@ -13,6 +13,8 @@
     <Property Name="poinPunishmentDosen" Type="Int32" />
     <NavigationProperty Name="JurusanInstansi" Relationship="Self.FK_Dosen_JurusanInstansi" FromRole="Dosen" ToRole="JurusanInstansi" />
     <NavigationProperty Name="Transaksis" Relationship="Self.FK_Transaksi_Dosen1" FromRole="Dosen" ToRole="Transaksi" />
+    <Property Name="barcodeImageDosen" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="barcodeDosen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="JurusanInstansi">
     <Key>
@@ -39,6 +41,8 @@
     <Property Name="poinPunishmentMhs" Type="Int32" />
     <NavigationProperty Name="JurusanInstansi" Relationship="Self.FK_Mahasiswa_JurusanInstansi" FromRole="Mahasiswa" ToRole="JurusanInstansi" />
     <NavigationProperty Name="Transaksis" Relationship="Self.FK_Transaksi_Mahasiswa" FromRole="Mahasiswa" ToRole="Transaksi" />
+    <Property Name="barcodeImageMhs" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="barcodeMhs" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="Pegawai">
     <Key>
@@ -54,6 +58,8 @@
     <Property Name="poinPunishmetPegawai" Type="Int32" />
     <NavigationProperty Name="JurusanInstansi" Relationship="Self.FK_Pegawai_JurusanInstansi" FromRole="Pegawai" ToRole="JurusanInstansi" />
     <NavigationProperty Name="Transaksis" Relationship="Self.FK_Transaksi_Pegawai" FromRole="Pegawai" ToRole="Transaksi" />
+    <Property Name="barcodeImagePegawai" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="barcodePegawai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="Sepeda">
     <Key>
@@ -233,5 +239,11 @@
       <End Role="Transaksi" EntitySet="Transaksis" />
     </AssociationSet>
     <FunctionImport Name="GetNewIdTransaction" ReturnType="Collection(Int32)" />
+    <FunctionImport Name="GetLokasiShelter" ReturnType="Collection(String)">
+      <Parameter Name="idShelter" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetNamaShelter" ReturnType="Collection(String)">
+      <Parameter Name="idShelter" Mode="In" Type="Int32" />
+    </FunctionImport>
   </EntityContainer>
 </Schema>

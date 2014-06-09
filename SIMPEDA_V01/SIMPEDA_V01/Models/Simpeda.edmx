@@ -16,6 +16,8 @@
           <Property Name="alamatDosen" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="emailDosen" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="poinPunishmentDosen" Type="int" />
+          <Property Name="barcodeImageDosen" Type="varchar(max)" />
+          <Property Name="barcodeDosen" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="JurusanInstansi">
           <Key>
@@ -37,6 +39,8 @@
           <Property Name="alamatMhs" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="emailMhs" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="poinPunishmentMhs" Type="int" />
+          <Property Name="barcodeImageMhs" Type="varchar(max)" />
+          <Property Name="barcodeMhs" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Pegawai">
           <Key>
@@ -50,6 +54,8 @@
           <Property Name="alamatPegawai" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="emailPegawai" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="poinPunishmetPegawai" Type="int" />
+          <Property Name="barcodeImagePegawai" Type="varchar(max)" />
+          <Property Name="barcodePegawai" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Sepeda">
           <Key>
@@ -181,6 +187,12 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="GetLokasiShelter" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idShelter" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetNamaShelter" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idShelter" Type="int" Mode="In" />
+        </Function>
         <Function Name="GetNewIdTransaction" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="SimpedaModelStoreContainer">
           <EntitySet Name="Dosen" EntityType="Self.Dosen" Schema="dbo" store:Type="Tables" />
@@ -240,6 +252,8 @@
           <Property Name="poinPunishmentDosen" Type="Int32" />
           <NavigationProperty Name="JurusanInstansi" Relationship="Self.FK_Dosen_JurusanInstansi" FromRole="Dosen" ToRole="JurusanInstansi" />
           <NavigationProperty Name="Transaksis" Relationship="Self.FK_Transaksi_Dosen1" FromRole="Dosen" ToRole="Transaksi" />
+          <Property Name="barcodeImageDosen" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="barcodeDosen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="JurusanInstansi">
           <Key>
@@ -266,6 +280,8 @@
           <Property Name="poinPunishmentMhs" Type="Int32" />
           <NavigationProperty Name="JurusanInstansi" Relationship="Self.FK_Mahasiswa_JurusanInstansi" FromRole="Mahasiswa" ToRole="JurusanInstansi" />
           <NavigationProperty Name="Transaksis" Relationship="Self.FK_Transaksi_Mahasiswa" FromRole="Mahasiswa" ToRole="Transaksi" />
+          <Property Name="barcodeImageMhs" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="barcodeMhs" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Pegawai">
           <Key>
@@ -281,6 +297,8 @@
           <Property Name="poinPunishmetPegawai" Type="Int32" />
           <NavigationProperty Name="JurusanInstansi" Relationship="Self.FK_Pegawai_JurusanInstansi" FromRole="Pegawai" ToRole="JurusanInstansi" />
           <NavigationProperty Name="Transaksis" Relationship="Self.FK_Transaksi_Pegawai" FromRole="Pegawai" ToRole="Transaksi" />
+          <Property Name="barcodeImagePegawai" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="barcodePegawai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Sepeda">
           <Key>
@@ -460,6 +478,12 @@
             <End Role="Transaksi" EntitySet="Transaksis" />
           </AssociationSet>
           <FunctionImport Name="GetNewIdTransaction" ReturnType="Collection(Int32)" />
+          <FunctionImport Name="GetLokasiShelter" ReturnType="Collection(String)">
+          <Parameter Name="idShelter" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GetNamaShelter" ReturnType="Collection(String)">
+          <Parameter Name="idShelter" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
@@ -470,6 +494,8 @@
           <EntitySetMapping Name="Dosens">
             <EntityTypeMapping TypeName="SimpedaModel.Dosen">
               <MappingFragment StoreEntitySet="Dosen">
+                <ScalarProperty Name="barcodeDosen" ColumnName="barcodeDosen" />
+                <ScalarProperty Name="barcodeImageDosen" ColumnName="barcodeImageDosen" />
                 <ScalarProperty Name="NIP" ColumnName="NIP" />
                 <ScalarProperty Name="idJurusan" ColumnName="idJurusan" />
                 <ScalarProperty Name="namaDosen" ColumnName="namaDosen" />
@@ -493,6 +519,8 @@
           <EntitySetMapping Name="Mahasiswas">
             <EntityTypeMapping TypeName="SimpedaModel.Mahasiswa">
               <MappingFragment StoreEntitySet="Mahasiswa">
+                <ScalarProperty Name="barcodeMhs" ColumnName="barcodeMhs" />
+                <ScalarProperty Name="barcodeImageMhs" ColumnName="barcodeImageMhs" />
                 <ScalarProperty Name="NRP" ColumnName="NRP" />
                 <ScalarProperty Name="idJurusan" ColumnName="idJurusan" />
                 <ScalarProperty Name="namaMhs" ColumnName="namaMhs" />
@@ -506,6 +534,8 @@
           <EntitySetMapping Name="Pegawais">
             <EntityTypeMapping TypeName="SimpedaModel.Pegawai">
               <MappingFragment StoreEntitySet="Pegawai">
+                <ScalarProperty Name="barcodePegawai" ColumnName="barcodePegawai" />
+                <ScalarProperty Name="barcodeImagePegawai" ColumnName="barcodeImagePegawai" />
                 <ScalarProperty Name="idPegawai" ColumnName="idPegawai" />
                 <ScalarProperty Name="idJurusan" ColumnName="idJurusan" />
                 <ScalarProperty Name="namaPegawai" ColumnName="namaPegawai" />
@@ -555,6 +585,8 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="GetNewIdTransaction" FunctionName="SimpedaModel.Store.GetNewIdTransaction" />
+          <FunctionImportMapping FunctionImportName="GetLokasiShelter" FunctionName="SimpedaModel.Store.GetLokasiShelter" />
+          <FunctionImportMapping FunctionImportName="GetNamaShelter" FunctionName="SimpedaModel.Store.GetNamaShelter" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?><pex id="{2f12efb7-1152-4d45-8f11-cf7a17dac15e}" creationTime="2014-06-06 11:29:01Z" configuration="SIMPEDA_V01.Controllers!\TransaksiController!\*" created="2014-06-06 11:29:01Z" pexVersion="1.0.0.0" xml="C:\Users\User\Documents\Simpeda_V01\SIMPEDA_V01\SIMPEDA_V01\bin\reports\140606.182901.5460.pex\report.per" html="C:\Users\User\Documents\Simpeda_V01\SIMPEDA_V01\SIMPEDA_V01\bin\reports\140606.182901.5460.pex\report.html"><environment commandLine="&quot;C:\Users\User\AppData\Local\Microsoft\VisualStudio\11.0\Extensions\4cyj1crs.n3f\Microsoft.Pex.x86.exe&quot; C:\Users\User\Documents\Simpeda_V01\SIMPEDA_V01\SIMPEDA_V01\bin\SIMPEDA_V01.dll /d /mmf:M|SepedaShelter!|i|2 /nf:SIMPEDA_V01.Controllers! /tf:SepedaController! /erm:LazyWizard /ac /ia:EntityFramework;EntityFramework.SqlServer;System.Runtime.Serialization;System.Security;System.Web.DynamicData;System.Web.Entity;System.Web.ApplicationServices;System.ComponentModel.DataAnnotations;System.Web.Extensions;System.Drawing;System.Web.Services;System.EnterpriseServices;Microsoft.Web.Infrastructure;System.Web.Razor;System.Web.Webpages;System.Web.Webpages.Deployment;System.Web.Webpages.Razor;System.Web.Helpers;System.Web.Mvc /sa:C:\Users\User\AppData\Local\Microsoft\VisualStudio\11.0\Extensions\4cyj1crs.n3f\Microsoft.Pex.Fakes.dll /x86 /nor /rl:Xml /ro:C:\Users\User\Documents\Simpeda_V01\SIMPEDA_V01\SIMPEDA_V01\bin\reports /tan:SIMPEDA_V01.Tests /testf:Direct /testl:cs /testp:C:\Users\User\Documents\Simpeda_V01\SIMPEDA_V01\SIMPEDA_V01\SIMPEDA_V01.csproj /testpnoup /skiptest" machineName="USER-PC" osVersion="Microsoft Windows NT 6.1.7600.0" processorCount="4" clrVersion="4.0.30319.17929" bitness="x86" user="User"><envVars><envVar name="HOMEPATH" value="\Users\User"/>
+<envVar name="COMPUTERNAME" value="USER-PC"/>
+<envVar name="windir" value="C:\Windows"/>
+<envVar name="CommonProgramFiles(x86)" value="C:\Program Files (x86)\Common Files"/>
+<envVar name="PROCESSOR_IDENTIFIER" value="Intel64 Family 6 Model 42 Stepping 7, GenuineIntel"/>
+<envVar name="IIS_SITES_HOME" value="C:\Users\User\Documents\My Web Sites"/>
+<envVar name="SESSIONNAME" value="Console"/>
+<envVar name="PROCESSOR_REVISION" value="2a07"/>
+<envVar name="CLRMONITOR_INSTRUMENT_TYPES_EXCLUSIONS" value=""/>
+<envVar name="PATHEXT" value=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC"/>
+<envVar name="PkgDefApplicationConfigFile" value="C:\Users\User\AppData\Local\Microsoft\VisualStudio\11.0\devenv.exe.config"/>
+<envVar name="CLRMONITOR_CLSID" value="{C1DAAFC4-10C6-4838-9F89-435E2120F5F1}"/>
+<envVar name="SystemDrive" value="C:"/>
+<envVar name="TMP" value="C:\Users\User\AppData\Local\Temp"/>
+<envVar name="TEMP" value="C:\Users\User\AppData\Local\Temp"/>
+<envVar name="IIS_BIN" value="C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE"/>
+<envVar name="pex_wait_for_server_channel" value="1"/>
+<envVar name="CLRMONITOR_PROTECT_TYPES" value=""/>
+<envVar name="IIS_DRIVE" value="C:"/>
+<envVar name="CLRMONITOR_INITIALIZED" value="0xd"/>
+<envVar name="USERDOMAIN" value="USER-PC"/>
+<envVar name="ComSpec" value="C:\Windows\system32\cmd.exe"/>
+<envVar name="CLRMONITOR_ERASE_FINALIZER_TYPES" value=""/>
+<envVar name="PROCESSOR_LEVEL" value="6"/>
+<envVar name="NUMBER_OF_PROCESSORS" value="4"/>
+<envVar name="Python" value="D:\app\User\product\11.2.0\client_1;D:\app\User\product\11.2.0\client_1\bin;C:\oraclexe\app\oracle\product\10.2.0\server\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\MATLAB7\bin\win32;C:\Program Files (x86)\Common Files\Ulead Systems\MPEG;C:\Program Files (x86)\Common Files\Roxio Shared\9.0\DLLShared\;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\;C:\Program Files (x86)\Windows Kits\8.0\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;C:\Python"/>
+<envVar name="VisualStudioVersion" value="11.0"/>
+<envVar name="CommonProgramFiles" value="C:\Program Files (x86)\Common Files"/>
+<envVar name="ProgramFiles(x86)" value="C:\Program Files (x86)"/>
+<envVar name="PUBLIC" value="C:\Users\Public"/>
+<envVar name="CLRMONITOR_INSTRUMENT_NAMESPACES_EXCLUSIONS" value=""/>
+<envVar name="CLRMONITOR_FLAGS" value=""/>
+<envVar name="VisualStudioDir" value="C:\Users\User\Documents\Visual Studio 2012"/>
+<envVar name="pex_instrumentation" value="1"/>
+<envVar name="COR_PROFILER_PATH" value="C:\Users\User\AppData\Local\Microsoft\VisualStudio\11.0\Extensions\4cyj1crs.n3f\Microsoft.ExtendedReflection.ClrMonitor.X86.dll"/>
+<envVar name="CLRMONITOR_INSTRUMENT_TYPES" value="System.Array,System.Array+ArrayEnumerator,System.Array+FunctorComparer`1,System.Array+SZArrayEnumerator,System.Array+SorterGenericArray,System.Array+SorterObjectArray,System.Boolean,System.Byte,System.Char,System.CharEnumerator,System.ComponentModel.Component,System.ComponentModel.Container,System.ComponentModel.Container+Site,System.Convert,System.Currency,System.DateTime,System.DateTimeOffset,System.Decimal,System.Diagnostics.Assert,System.Double,System.Globalization.CharUnicodeInfo,System.Globalization.CultureTableRecord,System.Globalization.TextInfo,System.Guid,System.IO.MemoryStream,System.IO.Stream,System.IO.StreamReader,System.IO.StreamWriter,System.IO.StringReader,System.IO.StringWriter,System.Int16,System.Int32,System.Int64,System.Lazy`1,System.Lazy`1+Boxed,System.Lazy`1+LazyInternalExceptionHolder,System.Math,System.Nullable,System.Nullable`1,System.OrdinalComparer,System.SByte,System.SZArrayHelper,System.SZArrayHelper+SZGenericArrayEnumerator`1,System.Single,System.String,System.StringComparer,System.Text.ASCIIEncoding,System.Text.DecoderNLS,System.Text.Encoding,System.Text.UTF8Encoding,System.TimeSpan,System.Tuple,System.Tuple`1,System.Tuple`2,System.Tuple`3,System.Tuple`4,System.Tuple`5,System.Tuple`6,System.Tuple`7,System.Tuple`8,System.UInt16,System.UInt32,System.UInt64,System.Xml.XmlTextWriter,System.Xml.XmlTextWriter+Namespace,System.Xml.XmlTextWriter+NamespaceState,System.Xml.XmlTextWriter+SpecialAttr,System.Xml.XmlTextWriter+State,System.Xml.XmlTextWriter+TagInfo,System.Xml.XmlTextWriter+Token,System.Xml.XmlWriter,System.Xml.XmlWriter+&lt;WriteAttributeStringAsyncHelper&gt;d__0,System.Xml.XmlWriter+&lt;WriteAttributesAsync&gt;d__7,System.Xml.XmlWriter+&lt;WriteElementStringAsync&gt;d__20,System.Xml.XmlWriter+&lt;WriteLocalNamespacesAsync&gt;d__23,System.Xml.XmlWriter+&lt;WriteNodeAsync&gt;d__19,System.Xml.XmlWriter+&lt;WriteNodeAsync_CallAsyncReader&gt;d__10,System.Xml.XmlWriter+&lt;WriteNodeAsync_CallSyncReader&gt;d__a,System.Xml.XmlWriter+&lt;WriteQualifiedNameAsync&gt;d__3,__Box`1,__SzArrayHelper`1"/>
+<envVar name="ProgramData" value="C:\ProgramData"/>
+<envVar name="ProgramW6432" value="C:\Program Files"/>
+<envVar name="ProgramFiles" value="C:\Program Files (x86)"/>
+<envVar name="PT5HOME" value="C:\Program Files (x86)\Cisco Packet Tracer 5.3.3"/>
+<envVar name="CLRMONITOR_ERASE_CCTOR_TYPES" value=""/>
+<envVar name="FP_NO_HOST_CHECK" value="NO"/>
+<envVar name="pex_clientid" value="pex5512_1"/>
+<envVar name="IIS_USER_HOME" value="C:\Users\User\Documents\IISExpress"/>
+<envVar name="SystemRoot" value="C:\Windows"/>
+<envVar name="CLRMONITOR_PROTECT_ALL_CCTORS" value="1"/>
+<envVar name="pex_server_channel" value="pex5512"/>
+<envVar name="LOCALAPPDATA" value="C:\Users\User\AppData\Local"/>
+<envVar name="CommonProgramW6432" value="C:\Program Files\Common Files"/>
+<envVar name="PROCESSOR_ARCHITEW6432" value="AMD64"/>
+<envVar name="LOGONSERVER" value="\\USER-PC"/>
+<envVar name="USERPROFILE" value="C:\Users\User"/>
+<envVar name="MSBuildLoadMicrosoftTargetsReadOnly" value="true"/>
+<envVar name="CLRMONITOR_SUBSTITUTIONS" value="C:\Users\User\AppData\Local\Microsoft\VisualStudio\11.0\Extensions\4cyj1crs.n3f\Microsoft.ExtendedReflection.Reasoning.dll"/>
+<envVar name="VSLANG" value="1033"/>
+<envVar name="APPDATA" value="C:\Users\User\AppData\Roaming"/>
+<envVar name="HOMEDRIVE" value="C:"/>
+<envVar name="PSModulePath" value="C:\Windows\system32\WindowsPowerShell\v1.0\Modules\"/>
+<envVar name="VS110COMNTOOLS" value="C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\Tools\"/>
+<envVar name="USERNAME" value="User"/>
+<envVar name="COR_PROFILER" value="{C1DAAFC4-10C6-4838-9F89-435E2120F5F1}"/>
+<envVar name="PROCESSOR_ARCHITECTURE" value="x86"/>
+<envVar name="CLRMONITOR_INSTRUMENT_ASSEMBLIES_EXCLUSIONS" value="Microsoft.QualityTools.Testing.Fakes"/>
+<envVar name="OS" value="Windows_NT"/>
+<envVar name="CLRMONITOR_INSTRUMENT_NAMESPACES" value="System.Collections,System.Collections.Generic,System.Collections.ObjectModel,System.Collections.Specialized,System.Diagnostics.Contracts"/>
+<envVar name="Path" value="D:\app\User\product\11.2.0\client_1;D:\app\User\product\11.2.0\client_1\bin;C:\oraclexe\app\oracle\product\10.2.0\server\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\MATLAB7\bin\win32;C:\Program Files (x86)\Common Files\Ulead Systems\MPEG;C:\Program Files (x86)\Common Files\Roxio Shared\9.0\DLLShared\;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Windows Kits\8.0\Windows Performance Toolkit\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\"/>
+<envVar name="CLRMONITOR_INSTRUMENT_ASSEMBLIES" value="EntityFramework,EntityFramework.SqlServer,Microsoft.Contracts,Microsoft.VisualBasic,Microsoft.VisualStudio.QualityTools.UnitTestFramework,Microsoft.Web.Infrastructure,SIMPEDA_V01,SIMPEDA_V01.Tests,System,System.ComponentModel.DataAnnotations,System.Core,System.Drawing,System.EnterpriseServices,System.Runtime.Serialization,System.Security,System.Web,System.Web.ApplicationServices,System.Web.DynamicData,System.Web.Entity,System.Web.Extensions,System.Web.Helpers,System.Web.Mvc,System.Web.Razor,System.Web.Services,System.Web.Webpages,System.Web.Webpages.Deployment,System.Web.Webpages.Razor,xunit"/>
+<envVar name="ALLUSERSPROFILE" value="C:\ProgramData"/>
+</envVars>
+</environment>
+<settings/>
+<reflection><log level="message" time="2014-06-06 11:29:02Z" category="tests" message="symbol test hasher not supported: no symbols manager present"/>
+<log level="message" time="2014-06-06 11:29:02Z" category="tests" message="testhasher Microsoft.Pex.Engine.TestGeneration.PexSymbolTestHasher not supported"/>
+</reflection>
+<assembly name="SIMPEDA_V01" version="1.0.0.0" fileVersion="1.0.0.0" fullName="SIMPEDA_V01, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" location="C:\Users\User\Documents\Simpeda_V01\SIMPEDA_V01\SIMPEDA_V01\bin\SIMPEDA_V01.dll" fileName="SIMPEDA_V01.dll"><settings testFramework="Direct" ignoreAppConfig="True" testLanguage="cs"/>
+<focus type="Microsoft.Pex.Framework.Focus.PexFocusOnAssemblyAttribute" typeName="PexFocusOnAssemblyAttribute" token="20001d2" description="Microsoft.Pex.Framework.Focus.PexFocusOnAssemblyAttribute" searchPriority="lowest" coverage="true"><focusedAssembly name="System" version="4.0.0.0" fileVersion="4.0.30319.17929" fullName="System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" location="C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System\v4.0_4.0.0.0__b77a5c561934e089\System.dll" fileName="System.dll"/>
+</focus>
+<focus type="Microsoft.Pex.Framework.Focus.PexFocusOnAssemblyAttribute" typeName="PexFocusOnAssemblyAttribute" token="20001d2" description="Microsoft.Pex.Framework.Focus.PexFocusOnAssemblyAttribute" searchPriority="lowest" coverage="true"><focusedAssembly name="System.Data" version="4.0.0.0" fileVersion="4.0.30319.17929" fullName="System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" location="C:\Windows\Microsoft.Net\assembly\GAC_32\System.Data\v4.0_4.0.0.0__b77a5c561934e089\System.Data.dll" fileName="System.Data.dll"/>
+</focus>
+<focus type="Microsoft.Pex.Framework.Focus.PexFocusOnAssemblyAttribute" typeName="PexFocusOnAssemblyAttribute" token="20001d2" description="Microsoft.Pex.Framework.Focus.PexFocusOnAssemblyAttribute" searchPriority="lowest" coverage="true"><focusedAssembly name="System.Web" version="4.0.0.0" fileVersion="4.0.30319.17929" fullName="System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" location="C:\Windows\Microsoft.Net\assembly\GAC_32\System.Web\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Web.dll" fileName="System.Web.dll"/>
+</focus>
+<focus type="Microsoft.Pex.Framework.Focus.PexFocusOnAssemblyAttribute" typeName="PexFocusOnAssemblyAttribute" token="20001d2" description="Microsoft.Pex.Framework.Focus.PexFocusOnAssemblyAttribute" searchPriority="lowest" coverage="true"><focusedAssembly name="System.Xml" version="4.0.0.0" fileVersion="4.0.30319.17929" fullName="System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" location="C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Xml\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.dll" fileName="System.Xml.dll"/>
+</focus>
+<focus type="Microsoft.Pex.Framework.Focus.PexFocusOnAssemblyAttribute" typeName="PexFocusOnAssemblyAttribute" token="20001d2" description="Microsoft.Pex.Framework.Focus.PexFocusOnAssemblyAttribute" searchPriority="lowest" coverage="true"><focusedAssembly name="mscorlib" version="4.0.0.0" fileVersion="4.0.30319.17929" fullName="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" location="C:\Windows\Microsoft.NET\Framework\v4.0.30319\mscorlib.dll" fileName="mscorlib.dll"/>
+</focus>
+<focus type="Microsoft.Pex.Framework.Focus.PexFocusOnAssemblyAttribute" typeName="PexFocusOnAssemblyAttribute" token="20001d2" description="Microsoft.Pex.Framework.Focus.PexFocusOnAssemblyAttribute" searchPriority="lowest" coverage="true"><focusedAssembly name="System.Core" version="4.0.0.0" fileVersion="4.0.30319.17929" fullName="System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" location="C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Core\v4.0_4.0.0.0__b77a5c561934e089\System.Core.dll" fileName="System.Core.dll"/>
+</focus>
+<focus type="Microsoft.Pex.Framework.Focus.PexFocusOnAssemblyAttribute" typeName="PexFocusOnAssemblyAttribute" token="20001d2" description="Microsoft.Pex.Framework.Focus.PexFocusOnAssemblyAttribute" searchPriority="lowest" coverage="true"><focusedAssembly name="System.Configuration" version="4.0.0.0" fileVersion="4.0.30319.17929" fullName="System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" location="C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Configuration\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll" fileName="System.Configuration.dll"/>
+</focus>
+<focus type="Microsoft.Pex.Framework.Focus.PexFocusOnAssemblyAttribute" typeName="PexFocusOnAssemblyAttribute" token="20001d2" description="Microsoft.Pex.Framework.Focus.PexFocusOnAssemblyAttribute" searchPriority="lowest" coverage="true"><focusedAssembly name="Microsoft.VisualBasic" version="10.0.0.0" fileVersion="10.0.0.0" fullName="Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" location="C:\Windows\Microsoft.Net\assembly\GAC_MSIL\Microsoft.VisualBasic\v4.0_10.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualBasic.dll" fileName="Microsoft.VisualBasic.dll"/>
+</focus>
+<coverageFilter type="Microsoft.Pex.Framework.Coverage.PexCoverageFilterAssemblyAttribute+CoverageFilter" typeName="CoverageFilter" token="20001a7" description="system code types from Assembly System"/>
+<coverageFilter type="Microsoft.Pex.Framework.Coverage.PexCoverageFilterAssemblyAttribute+CoverageFilter" typeName="CoverageFilter" token="20001a7" description="system code types from Assembly System.Data"/>
+<coverageFilter type="Microsoft.Pex.Framework.Coverage.PexCoverageFilterAssembliesAttribute+CoverageFilter" typeName="CoverageFilter" token="2000288" description="system code types from assemblies Microsoft.ExtendedReflection.Collections.SafeSet`1[System.String]"/>
+<coverageFilter type="Microsoft.Pex.Framework.Coverage.PexCoverageFilterAssemblyAttribute+CoverageFilter" typeName="CoverageFilter" token="20001a7" description="system code types from Assembly System.Web"/>
+<coverageFilter type="Microsoft.Pex.Engine.Libraries.ContractsLibrary+ContractsRuntimeFilterCoverageAttribute+Filter" typeName="Filter" token="2000253" description="Microsoft.Pex.Engine.Libraries.ContractsLibrary+ContractsRuntimeFilterCoverageAttribute+Filter"/>
+<coverageFilter type="Microsoft.Pex.Framework.Coverage.PexCoverageFilterAssemblyAttribute+CoverageFilter" typeName="CoverageFilter" token="20001a7" description="system code types from Assembly Microsoft.Contracts"/>
+<coverageFilter type="Microsoft.Pex.Framework.Coverage.PexCoverageFilterAssemblyAttribute+CoverageFilter" typeName="CoverageFilter" token="20001a7" description="system code types from Assembly System.Xml"/>
+<coverageFilter type="Microsoft.Pex.Engine.Libraries.PexFrameworkLibrary+PexTestFrameworkCoverageFilterAttribute+CoverageFilter" typeName="CoverageFilter" token="2000160" description="system code types from test framework assemblies "/>
+<coverageFilter type="Microsoft.Pex.Framework.Coverage.PexCoverageFilterAssemblyAttribute+CoverageFilter" typeName="CoverageFilter" token="20001a7" description="system code types from Assembly Microsoft.Pex.Framework"/>
+<coverageFilter type="Microsoft.Pex.Engine.Libraries.PexFrameworkLibrary+PexCoverageFilterCompilerGeneratedMethodsAttribute+CoverageFilter" typeName="CoverageFilter" token="200015b" description="compiler generated methods"/>
+<coverageFilter type="Microsoft.Pex.Framework.Coverage.PexCoverageFilterAssemblyAttribute+CoverageFilter" typeName="CoverageFilter" token="20001a7" description="system code types from Assembly mscorlib"/>
+<coverageFilter type="Microsoft.Pex.Framework.Coverage.PexCoverageFilterAssemblyAttribute+CoverageFilter" typeName="CoverageFilter" token="20001a7" description="system code types from Assembly Microsoft.Pex"/>
+<coverageFilter type="Microsoft.Pex.Framework.Coverage.PexCoverageFilterAssemblyAttribute+CoverageFilter" typeName="CoverageFilter" token="20001a7" description="system code types from Assembly Microsoft.ExtendedReflection"/>
+<coverageFilter type="Microsoft.Pex.Framework.Coverage.PexCoverageFilterAssemblyAttribute+CoverageFilter" typeName="CoverageFilter" token="20001a7" description="system code types from Assembly System.Core"/>
+<coverageFilter type="Microsoft.Pex.Framework.Coverage.PexCoverageFilterAssemblyAttribute+CoverageFilter" typeName="CoverageFilter" token="20001a7" description="system code types from Assembly System.Configuration"/>
+<coverageFilter type="Microsoft.Pex.Framework.Coverage.PexCoverageFilterAssemblyAttribute+CoverageFilter" typeName="CoverageFilter" token="20001a7" description="system code types from Assembly Microsoft.VisualBasic"/>
+<fixture name="TransaksiControllerTest" type="SIMPEDA_V01.Controllers.TransaksiControllerTest" typeName="TransaksiControllerTest" token="2000002" href="fix\SIMPEDA_V01.Tests.1029.html"><type name="SIMPEDA_V01.Controllers.TransaksiControllerTest"/>
+<settings typeUnderTest="SIMPEDA_V01.Controllers.TransaksiController"/>
+<exploration shortName="Create(TransaksiController, Int32, Int32)" fullName="SIMPEDA_V01.Controllers.TransaksiControllerTest.Create(TransaksiController, Int32, Int32)" isDynamicCode="true"><target name="method System.Web.Mvc.ActionResult SIMPEDA_V01.Controllers.TransaksiController.Create(System.Int32 idShelter, System.Int32 idSepeda)"/>
+<log level="message" time="2014-06-06 11:29:02Z" category="progress" message="    0 runs"/>
+<explorable title="guessed how to create SIMPEDA_V01.Controllers.TransaksiController" kind="guessedclass" isExplorableTypeExported="true"><explorableType name="SIMPEDA_V01.Controllers.TransaksiController"/>
+<testAssemblyName name="SIMPEDA_V01.Tests"/>
+</explorable>
+<log level="warning" time="2014-06-06 11:29:03Z" wikiTopic="Usable Type Guessed" category="domains" message="will use System.Web.Mvc.ControllerActionInvoker as IActionInvoker"/>
+<log level="warning" time="2014-06-06 11:29:03Z" wikiTopic="Usable Type Guessed" category="domains" message="will use System.Web.Mvc.Async.AsyncControllerActionInvoker as IActionInvoker"/>
+<log level="warning" time="2014-06-06 11:29:03Z" wikiTopic="Usable Type Guessed" category="domains" message="will use System.Web.Mvc.SessionStateTempDataProvider as ITempDataProvider"/>
+<log level="warning" time="2014-06-06 11:29:03Z" wikiTopic="Usable Type Guessed" category="domains" message="will use System.Web.Mvc.ChildActionValueProvider as IValueProvider"/>
+<log level="warning" time="2014-06-06 11:29:03Z" wikiTopic="Usable Type Guessed" category="domains" message="will use System.Web.Mvc.NameValueCollectionValueProvider as IValueProvider"/>
+<log level="warning" time="2014-06-06 11:29:03Z" wikiTopic="Usable Type Guessed" category="domains" message="will use System.Web.Mvc.FormValueProvider as IValueProvider"/>
+<log level="warning" time="2014-06-06 11:29:03Z" wikiTopic="Usable Type Guessed" category="domains" message="will use System.Web.Mvc.HttpFileCollectionValueProvider as IValueProvider"/>
+<log level="warning" time="2014-06-06 11:29:03Z" wikiTopic="Usable Type Guessed" category="domains" message="will use System.Web.Mvc.QueryStringValueProvider as IValueProvider"/>
+<log level="warning" time="2014-06-06 11:29:03Z" wikiTopic="Usable Type Guessed" category="domains" message="will use System.Web.Mvc.RouteDataValueProvider as IValueProvider"/>
+<log level="warning" time="2014-06-06 11:29:03Z" wikiTopic="Usable Type Guessed" category="domains" message="will use System.Web.Mvc.ValueProviderCollection as IValueProvider"/>
+<log level="warning" time="2014-06-06 11:29:03Z" wikiTopic="Usable Type Guessed" category="domains" message="will use System.Web.Mvc.ValueProviderDictionary as IValueProvider"/>
+<log level="warning" time="2014-06-06 11:29:03Z" wikiTopic="Usable Type Guessed" category="domains" message="will use System.Web.Mvc.FormCollection as IValueProvider"/>
+<log level="warning" time="2014-06-06 11:29:03Z" wikiTopic="Usable Type Guessed" category="domains" message="will use System.Web.Mvc.ModelBindingContext+UnvalidatedValueProviderWrapper as IValueProvider"/>
+<uninstrumented methodDisplayName="System.Void System.Object..ctor()" declaringTypeDisplayName="System.Object" methodShortDisplayName="Object..ctor()" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Void System.Func`2..ctor(System.Object object, System.IntPtr method)" declaringTypeDisplayName="System.Func`2" methodShortDisplayName="Func`2..ctor(Object, IntPtr)" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Threading.Thread System.Threading.Thread.get_CurrentThread()" declaringTypeDisplayName="System.Threading.Thread" methodShortDisplayName="Thread.get_CurrentThread()" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Int32 System.Threading.Thread.get_ManagedThreadId()" declaringTypeDisplayName="System.Threading.Thread" methodShortDisplayName="Thread.get_ManagedThreadId()" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Void System.Func`2..ctor(System.Object object, System.IntPtr method)" declaringTypeDisplayName="System.Func`2" methodShortDisplayName="Func`2..ctor(Object, IntPtr)" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Type System.Object.GetType()" declaringTypeDisplayName="System.Object" methodShortDisplayName="Object.GetType()" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Reflection.TypeInfo System.Reflection.IntrospectionExtensions.GetTypeInfo(System.Type type)" declaringTypeDisplayName="System.Reflection.IntrospectionExtensions" methodShortDisplayName="IntrospectionExtensions.GetTypeInfo(Type)" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Reflection.Assembly System.RuntimeType.get_Assembly()" declaringTypeDisplayName="System.RuntimeType" methodShortDisplayName="RuntimeType.get_Assembly()" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Type System.Type.GetTypeFromHandle(System.RuntimeTypeHandle handle)" declaringTypeDisplayName="System.Type" methodShortDisplayName="Type.GetTypeFromHandle(RuntimeTypeHandle)" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Boolean System.Type.op_Equality(System.Type left, System.Type right)" declaringTypeDisplayName="System.Type" methodShortDisplayName="Type.op_Equality(Type, Type)" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Boolean System.Collections.Concurrent.ConcurrentDictionary`2.ContainsKey(!0 key)" declaringTypeDisplayName="System.Collections.Concurrent.ConcurrentDictionary`2" methodShortDisplayName="ConcurrentDictionary`2.ContainsKey(!0)" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Int32 System.Reflection.Assembly.GetHashCode()" declaringTypeDisplayName="System.Reflection.Assembly" methodShortDisplayName="Assembly.GetHashCode()" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Object System.Configuration.ConfigurationElement.get_Item(System.String propertyName)" declaringTypeDisplayName="System.Configuration.ConfigurationElement" methodShortDisplayName="ConfigurationElement.get_Item(String)" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Int32 System.RuntimeType.GetHashCode()" declaringTypeDisplayName="System.RuntimeType" methodShortDisplayName="RuntimeType.GetHashCode()" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Int32 System.String.GetHashCode()" declaringTypeDisplayName="System.String" methodShortDisplayName="String.GetHashCode()" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Boolean System.Type.op_Inequality(System.Type left, System.Type right)" declaringTypeDisplayName="System.Type" methodShortDisplayName="Type.op_Inequality(Type, Type)" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Collections.Generic.IEnumerable`1&lt;!!0&gt; System.Reflection.CustomAttributeExtensions.GetCustomAttributes(System.Reflection.MemberInfo element, System.Boolean inherit)" declaringTypeDisplayName="System.Reflection.CustomAttributeExtensions" methodShortDisplayName="CustomAttributeExtensions.GetCustomAttributes(MemberInfo, Boolean)" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Void System.Func`2..ctor(System.Object object, System.IntPtr method)" declaringTypeDisplayName="System.Func`2" methodShortDisplayName="Func`2..ctor(Object, IntPtr)" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Boolean System.Type.op_Inequality(System.Type left, System.Type right)" declaringTypeDisplayName="System.Type" methodShortDisplayName="Type.op_Inequality(Type, Type)" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Collections.Generic.IEnumerable`1&lt;System.Reflection.TypeInfo&gt; System.Reflection.RuntimeAssembly.get_DefinedTypes()" declaringTypeDisplayName="System.Reflection.RuntimeAssembly" methodShortDisplayName="RuntimeAssembly.get_DefinedTypes()" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Int32 System.Array.get_Rank()" declaringTypeDisplayName="System.Array" methodShortDisplayName="Array.get_Rank()" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Void System.Func`2..ctor(System.Object object, System.IntPtr method)" declaringTypeDisplayName="System.Func`2" methodShortDisplayName="Func`2..ctor(Object, IntPtr)" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Void System.Func`2..ctor(System.Object object, System.IntPtr method)" declaringTypeDisplayName="System.Func`2" methodShortDisplayName="Func`2..ctor(Object, IntPtr)" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Type System.Reflection.TypeInfo.AsType()" declaringTypeDisplayName="System.Reflection.TypeInfo" methodShortDisplayName="TypeInfo.AsType()" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Boolean System.RuntimeType.IsSubclassOf(System.Type type)" declaringTypeDisplayName="System.RuntimeType" methodShortDisplayName="RuntimeType.IsSubclassOf(Type)" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Boolean System.Collections.Concurrent.ConcurrentDictionary`2.TryAdd(!0 key, !1 value)" declaringTypeDisplayName="System.Collections.Concurrent.ConcurrentDictionary`2" methodShortDisplayName="ConcurrentDictionary`2.TryAdd(!0, !1)" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Void System.Diagnostics.Debugger.NotifyOfCrossThreadDependency()" declaringTypeDisplayName="System.Diagnostics.Debugger" methodShortDisplayName="Debugger.NotifyOfCrossThreadDependency()" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="!!0 System.Threading.Volatile.Read(!!0&amp; location)" declaringTypeDisplayName="System.Threading.Volatile" methodShortDisplayName="Volatile.Read(!!0&amp;)" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Void System.Threading.Monitor.Enter(System.Object obj, System.Boolean&amp; lockTaken)" declaringTypeDisplayName="System.Threading.Monitor" methodShortDisplayName="Monitor.Enter(Object, Boolean&amp;)" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Boolean System.Delegate.op_Equality(System.Delegate d1, System.Delegate d2)" declaringTypeDisplayName="System.Delegate" methodShortDisplayName="Delegate.op_Equality(Delegate, Delegate)" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Void System.Func`3..ctor(System.Object object, System.IntPtr method)" declaringTypeDisplayName="System.Func`3" methodShortDisplayName="Func`3..ctor(Object, IntPtr)" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Void System.Func`2..ctor(System.Object object, System.IntPtr method)" declaringTypeDisplayName="System.Func`2" methodShortDisplayName="Func`2..ctor(Object, IntPtr)" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Boolean System.Type.op_Equality(System.Type left, System.Type right)" declaringTypeDisplayName="System.Type" methodShortDisplayName="Type.op_Equality(Type, Type)" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Boolean System.RuntimeType.get_ContainsGenericParameters()" declaringTypeDisplayName="System.RuntimeType" methodShortDisplayName="RuntimeType.get_ContainsGenericParameters()" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Reflection.TypeInfo System.Reflection.IntrospectionExtensions.GetTypeInfo(System.Type type)" declaringTypeDisplayName="System.Reflection.IntrospectionExtensions" methodShortDisplayName="IntrospectionExtensions.GetTypeInfo(Type)" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Collections.Generic.IEnumerable`1&lt;System.Reflection.ConstructorInfo&gt; System.Reflection.TypeInfo.get_DeclaredConstructors()" declaringTypeDisplayName="System.Reflection.TypeInfo" methodShortDisplayName="TypeInfo.get_DeclaredConstructors()" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Void System.Func`2..ctor(System.Object object, System.IntPtr method)" declaringTypeDisplayName="System.Func`2" methodShortDisplayName="Func`2..ctor(Object, IntPtr)" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Boolean System.Reflection.MethodBase.get_IsStatic()" declaringTypeDisplayName="System.Reflection.MethodBase" methodShortDisplayName="MethodBase.get_IsStatic()" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Reflection.ParameterInfo[] System.Reflection.RuntimeConstructorInfo.GetParameters()" declaringTypeDisplayName="System.Reflection.RuntimeConstructorInfo" methodShortDisplayName="RuntimeConstructorInfo.GetParameters()" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Void System.Func`2..ctor(System.Object object, System.IntPtr method)" declaringTypeDisplayName="System.Func`2" methodShortDisplayName="Func`2..ctor(Object, IntPtr)" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Void System.Array.Copy(System.Array sourceArray, System.Int32 sourceIndex, System.Array destinationArray, System.Int32 destinationIndex, System.Int32 length, System.Boolean reliable)" declaringTypeDisplayName="System.Array" methodShortDisplayName="Array.Copy(Array, Int32, Array, Int32, Int32, Boolean)" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Type System.Reflection.RuntimeParameterInfo.get_ParameterType()" declaringTypeDisplayName="System.Reflection.RuntimeParameterInfo" methodShortDisplayName="RuntimeParameterInfo.get_ParameterType()" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Boolean System.Reflection.ConstructorInfo.op_Equality(System.Reflection.ConstructorInfo left, System.Reflection.ConstructorInfo right)" declaringTypeDisplayName="System.Reflection.ConstructorInfo" methodShortDisplayName="ConstructorInfo.op_Equality(ConstructorInfo, ConstructorInfo)" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Boolean System.Type.get_IsAbstract()" declaringTypeDisplayName="System.Type" methodShortDisplayName="Type.get_IsAbstract()" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Boolean System.RuntimeType.get_IsGenericType()" declaringTypeDisplayName="System.RuntimeType" methodShortDisplayName="RuntimeType.get_IsGenericType()" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Object System.Activator.CreateInstance(System.Type type, System.Boolean nonPublic)" declaringTypeDisplayName="System.Activator" methodShortDisplayName="Activator.CreateInstance(Type, Boolean)" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Void System.Collections.Concurrent.ConcurrentDictionary`2..ctor()" declaringTypeDisplayName="System.Collections.Concurrent.ConcurrentDictionary`2" methodShortDisplayName="ConcurrentDictionary`2..ctor()" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Void System.Collections.Concurrent.ConcurrentStack`1..ctor()" declaringTypeDisplayName="System.Collections.Concurrent.ConcurrentStack`1" methodShortDisplayName="ConcurrentStack`1..ctor()" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Void System.Collections.Concurrent.ConcurrentStack`1.Push(!0 item)" declaringTypeDisplayName="System.Collections.Concurrent.ConcurrentStack`1" methodShortDisplayName="ConcurrentStack`1.Push(!0)" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="!0[] System.Collections.Concurrent.ConcurrentStack`1.ToArray()" declaringTypeDisplayName="System.Collections.Concurrent.ConcurrentStack`1" methodShortDisplayName="ConcurrentStack`1.ToArray()" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Void System.Collections.Concurrent.ConcurrentDictionary`2..ctor()" declaringTypeDisplayName="System.Collections.Concurrent.ConcurrentDictionary`2" methodShortDisplayName="ConcurrentDictionary`2..ctor()" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Type System.RuntimeType.GetGenericTypeDefinition()" declaringTypeDisplayName="System.RuntimeType" methodShortDisplayName="RuntimeType.GetGenericTypeDefinition()" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Boolean System.RuntimeType.get_IsEnum()" declaringTypeDisplayName="System.RuntimeType" methodShortDisplayName="RuntimeType.get_IsEnum()" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Void System.Collections.Concurrent.ConcurrentDictionary`2..ctor()" declaringTypeDisplayName="System.Collections.Concurrent.ConcurrentDictionary`2" methodShortDisplayName="ConcurrentDictionary`2..ctor()" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Void System.Func`2..ctor(System.Object object, System.IntPtr method)" declaringTypeDisplayName="System.Func`2" methodShortDisplayName="Func`2..ctor(Object, IntPtr)" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Void System.Func`2..ctor(System.Object object, System.IntPtr method)" declaringTypeDisplayName="System.Func`2" methodShortDisplayName="Func`2..ctor(Object, IntPtr)" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Void System.Collections.Concurrent.ConcurrentDictionary`2..ctor()" declaringTypeDisplayName="System.Collections.Concurrent.ConcurrentDictionary`2" methodShortDisplayName="ConcurrentDictionary`2..ctor()" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Void System.Globalization.CultureInfo..ctor(System.String name)" declaringTypeDisplayName="System.Globalization.CultureInfo" methodShortDisplayName="CultureInfo..ctor(String)" wikiTopic="Uninstrumented Method Called"/>
+<uninstrumented methodDisplayName="System.Boolean System.String.Equals(System.String value)" declaringTypeDisplayName="System.String" methodShortDisplayName="String.Equals(String)" wikiTopic="Uninstrumented Method Called"/>
+<boundary kind="maxbranches" value="10000" message="maximum number of branches exceeded"/>
+<log level="message" time="2014-06-06 11:29:10Z" category="execution" message="Please notice: A branch in the method System.Collections.Generic.Dictionary`2.Resize was executed 1419 times; please check that the code is not stuck in an infinite loop."/>
+<generatedTest id="d465baaa-2ec2-48f0-acde-204e05c20610" index="1" run="2" status="pathboundsexceeded" explorationIsDynamicCode="true" boundaryDetails="Please notice: A branch in the method System.Collections.Generic.Dictionary`2.Resize was executed 1419 times; please check that the code is not stuck in an infinite loop." generated="true" new="true"/>
+<log level="message" time="2014-06-06 11:29:10Z" category="coverage" message="coverage increased from 0 to 1 blocks (+1) after flipping &lt;unknown method&gt; at 0x&lt;unknown offset&gt;"/>
+<coverage domain="usercodeundertest" unit="block" covered="1" total="3" coveredRatio="0.33333333333333331"/>
+<explorable title="could not create an instance of SIMPEDA_V01.Controllers.TransaksiController" kind="unexplorableclass" isExplorableTypeExported="true"><explorableType name="SIMPEDA_V01.Controllers.TransaksiController"/>
+<testAssemblyName name="SIMPEDA_V01.Tests"/>
+</explorable>
+<result name="Create(TransaksiController, Int32, Int32)" state="success" duration="7.74555743386061"/>
+<duration start="2014-06-06 11:29:02Z" end="2014-06-06 11:29:10Z" seconds="7.7714445"/>
+</exploration>
+<coverage domain="usercodeundertest" unit="block" covered="1" total="3" coveredRatio="0.33333333333333331"/>
+<duration start="2014-06-06 11:29:02Z" end="2014-06-06 11:29:10Z" seconds="7.8134469"/>
+</fixture>
+<coverage domain="usercodeundertest" unit="block" covered="1" total="3" coveredRatio="0.33333333333333331"/>
+<duration start="2014-06-06 11:29:02Z" end="2014-06-06 11:29:10Z" seconds="7.9434543"/>
+</assembly>
+<duration start="2014-06-06 11:29:01Z" end="2014-06-06 11:29:10Z" seconds="8.5624898"/>
+<background/>
+</pex>

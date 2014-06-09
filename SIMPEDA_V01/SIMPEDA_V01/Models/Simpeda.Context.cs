@@ -39,5 +39,23 @@ namespace SIMPEDA_V01.Models
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("GetNewIdTransaction");
         }
+    
+        public virtual ObjectResult<string> GetLokasiShelter(Nullable<int> idShelter)
+        {
+            var idShelterParameter = idShelter.HasValue ?
+                new ObjectParameter("idShelter", idShelter) :
+                new ObjectParameter("idShelter", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("GetLokasiShelter", idShelterParameter);
+        }
+    
+        public virtual ObjectResult<string> GetNamaShelter(Nullable<int> idShelter)
+        {
+            var idShelterParameter = idShelter.HasValue ?
+                new ObjectParameter("idShelter", idShelter) :
+                new ObjectParameter("idShelter", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("GetNamaShelter", idShelterParameter);
+        }
     }
 }

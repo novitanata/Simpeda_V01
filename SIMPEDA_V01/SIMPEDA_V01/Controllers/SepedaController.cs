@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Net;
+using System.Security.Cryptography;
 using System.Web;
 using System.Web.Mvc;
 using SIMPEDA_V01.Models;
@@ -27,9 +29,13 @@ namespace SIMPEDA_V01.Controllers
                           where s.idShelter.Equals(idShelter) 
                           select s;
             ViewBag.idShelter = idShelter;
-            ViewBag.idSepeda = from s in db.Sepedas
-                               where s.idShelter.Equals(idShelter)
-                               select s.idSepeda;
+            var idSepeda = from s in db.Sepedas
+                           where s.idShelter.Equals(idShelter)
+                           select s.idSepeda;
+            string namaShelter = db.GetNamaShelter(idShelter).First();
+            ViewBag.namaShelter = namaShelter;
+            string lokasi = db.GetLokasiShelter(idShelter).First();
+            ViewBag.lokasiShelter = lokasi;
             return View(sepedas.ToList());
         }
 

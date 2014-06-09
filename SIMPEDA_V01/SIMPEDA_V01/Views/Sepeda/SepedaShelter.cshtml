@@ -1,4 +1,5 @@
-﻿@using SIMPEDA_V01.Controllers
+﻿@using System.Web.UI.WebControls
+@using SIMPEDA_V01.Controllers
 @model IEnumerable<SIMPEDA_V01.Models.Sepeda>
 
 <br/><br/>
@@ -7,7 +8,8 @@
 }
 
 <br/><br/><br/>
-<h2>Shelter @ViewBag.idShelter </h2>
+<h2> @ViewBag.namaShelter </h2>
+<h3> Lokasi : @ViewBag.lokasiShelter </h3>
 
 <table class="table">
     <tr>
@@ -23,9 +25,6 @@
         <th>
            Keterangan
         </th>
-        <th>
-           Lokasi 
-        </th>
         <th></th>
     </tr>
 
@@ -38,17 +37,22 @@
             @Html.DisplayFor(modelItem => item.warnaSepeda)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.ketersediaan)
+            @if (item.ketersediaan.Equals(0))
+            {
+                <h5>Kosong</h5>
+            }
+            else
+            {
+                <h5>Tersedia</h5>
+                
+            }
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.keterangan)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Shelter.lokasiShelter)
-        </td>
-        <td>
-            <input type="submit" value="Details" class="btn btn-default" onclick="location.href='@Url.Action("Details","Sepeda",new{id=item.idSepeda})'" />
-            <input type="submit" value="Pinjam" id="@ViewBag.idSepeda" class="btn btn-default" onclick="location.href='@Url.Action("Create","Transaksi",new{id=item.idSepeda})'" />
+            <input type="submit" value="Details" class="btn btn-default" onclick="location.href='@Url.Action("Details", "Sepeda", new { id = item.idSepeda })'" />
+            <input type="submit" value="Pinjam" id="@ViewBag.idSepeda" class="btn btn-default" onclick=" location.href = '@Url.Action("Create", "Transaksi", new { idShelter = item.idShelter, idSepeda = item.idSepeda })' " />
         </td>
     </tr>
 }

@@ -13,6 +13,9 @@ namespace SIMPEDA_V01.Controllers
         // GET: /Home/
         public ActionResult Index()
         {
+            ViewBag.shelter = "Shelter";
+            ViewBag.Peminjaman = "Peminjaman";
+            ViewBag.Pengembalian = "Pengembalian";
             return View();
         }
 	}
