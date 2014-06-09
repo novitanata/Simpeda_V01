@@ -8,6 +8,12 @@ using System.Security.Cryptography;
 using System.Web;
 using System.Web.Mvc;
 using SIMPEDA_V01.Models;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
+using Gma.QrCodeNet.Encoding;
+using Gma.QrCodeNet.Encoding.Windows.Render;
+using  ZXing;
 
 namespace SIMPEDA_V01.Controllers
 {
@@ -23,6 +29,62 @@ namespace SIMPEDA_V01.Controllers
             return View(transaksis.ToList());
         }
 
+        public ActionResult BarcodeImage(String barcodeText)
+        {
+            QrEncoder qrEncoder = new QrEncoder(ErrorCorrectionLevel.H);
+            QrCode qrCode = new QrCode();
+            qrEncoder.TryEncode(barcodeText, out qrCode);
+            GraphicsRenderer renderer = new GraphicsRenderer(new FixedModuleSize(4, QuietZoneModules.Four), Brushes.Black, Brushes.White);
+
+            Stream memoryStream = new MemoryStream();
+            renderer.WriteToStream(qrCode.Matrix, ImageFormat.Png, memoryStream);
+
+            memoryStream.Position = 0;
+
+            var resultStream = new FileStreamResult(memoryStream, "image/png");
+            resultStream.FileDownloadName = String.Format("{0}.png", barcodeText);
+
+            return resultStream;
+        }
+
+        public ActionResult ScanBarcode(string path)
+        {
+            string type, content;
+            IBarcodeReader reader = new BarcodeReader();
+            var barcodeBitmap = (Bitmap)Bitmap.FromFile("D:\\barcode\\4.gif");
+            var result = reader.Decode(barcodeBitmap);
+            if (result != null)
+            {
+                type = result.BarcodeFormat.ToString();
+                content = result.Text;
+                ViewBag.type = type;
+                ViewBag.content = content;
+                int idTrans = Convert.ToInt32(content);
+
+                ViewBag.cek = idTrans;
+                //Transaksi transaksi = db.Transaksi.Find(idTrans);
+
+                var print = from t in db.Transaksis
+                            from m in db.Mahasiswas
+                            from d in db.Dosens
+                            from p in db.Pegawais
+                            where t.idTransaksi.Equals(idTrans) //&& t.NRP.Equals(m.NRP) && t.NIP.Equals(d.NIP) && t.idPegawai.Equals(p.idPegawai)
+                            select t;
+                ViewBag.idTransaksi = idTrans;
+                foreach (var item in print)
+                {
+                    ViewBag.idTransaksi = item.idTransaksi;
+                    ViewBag.namaDosen = item.idPeminjamDosen;
+                    ViewBag.namaPegawai = item.idPeminjamPegawai;
+                    ViewBag.namaMahasiswa = item.idPeminjamMhs;
+                    ViewBag.idShelterAsal = item.Sepeda.idShelter;
+                    ViewBag.waktuPinjam = item.waktuPinjam;
+                    ViewBag.sepeda = item.Sepeda.merkSepeda;
+                }
+            }
+            return View();
+        }
+
         // GET: /Transaksi/Details/5
         public ActionResult Details(int? id)
         {
@@ -35,6 +97,11 @@ namespace SIMPEDA_V01.Controllers
             {
                 return HttpNotFound();
             }
+
+            int? idTransaksi = id;
+            BarcodeImage(idTransaksi.ToString());
+            ViewBag.newId = idTransaksi;
+
             return View(transaksi);
         }
 
@@ -44,6 +111,7 @@ namespace SIMPEDA_V01.Controllers
             ViewBag.idPeminjamDosen = new SelectList(db.Dosens, "NIP", "namaDosen");
             ViewBag.idPeminjamMhs = new SelectList(db.Mahasiswas, "NRP", "namaMhs");
             ViewBag.idPeminjamPegawai = new SelectList(db.Pegawais, "idPegawai", "namaPegawai");
+<<<<<<< HEAD
             ViewBag.idSepeda = (from s in db.Sepedas
                                where s.idShelter.Equals(idShelter) && s.idSepeda.Equals(idSepeda)
                                select s.idSepeda).FirstOrDefault();
@@ -51,6 +119,18 @@ namespace SIMPEDA_V01.Controllers
                                 select t.idTransaksi).Max();
             int newId = idTransaksi + 1;
            //int newId = (int)db.GetNewIdTransaction().FirstOrDefault()
+=======
+            ViewBag.idSepeda = new SelectList(db.Sepedas, "idSepeda", "merkSepeda");
+
+            int idTransaksi = (from t in db.Transaksis
+                               select t.idTransaksi).Max();
+            int barcodeTrans = idTransaksi + 1;
+            BarcodeImage(barcodeTrans.ToString());
+            ViewBag.newId = barcodeTrans;
+
+            int newId = (int)db.GetNewIdTransaction().FirstOrDefault();
+
+>>>>>>> c1b2a7a6c0521851941a31544e49c486be8d1bd4
             ViewBag.idTransaksi = newId;
             ViewBag.tanggal = DateTime.Now;
             ViewBag.status = false;
