@@ -1,0 +1,29 @@
+﻿@model SIMPEDA_V01.Models.Transaksi
+
+@{
+    ViewBag.Title = "ScanBarcode";
+}
+
+<h2>ScanBarcode</h2>            
+<p>@ViewBag.content</p>
+x
+<p>@ViewBag.cek</p>
+
+<div>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            <p>@ViewBag.idTransaksi</p>
+            <p>@ViewBag.namaMahasiswa</p>
+            <p>@ViewBag.namaDosen</p>
+            <p>@ViewBag.namaPegawai</p>
+            <p>@ViewBag.idShelterAsal</p>
+            <p>@ViewBag.waktuPinjam</p>
+            <p>@ViewBag.sepeda</p>
+        </dt>
+    </dl>
+
+    @Html.ActionLink("CheckIn", "Edit", new { id=ViewBag.idTransaksi })
+
+</div>
+
