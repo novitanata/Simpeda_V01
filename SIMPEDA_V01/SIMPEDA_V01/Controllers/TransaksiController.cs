@@ -111,7 +111,7 @@ namespace SIMPEDA_V01.Controllers
             ViewBag.idPeminjamDosen = new SelectList(db.Dosens, "NIP", "namaDosen");
             ViewBag.idPeminjamMhs = new SelectList(db.Mahasiswas, "NRP", "namaMhs");
             ViewBag.idPeminjamPegawai = new SelectList(db.Pegawais, "idPegawai", "namaPegawai");
-<<<<<<< HEAD
+
             ViewBag.idSepeda = (from s in db.Sepedas
                                where s.idShelter.Equals(idShelter) && s.idSepeda.Equals(idSepeda)
                                select s.idSepeda).FirstOrDefault();
@@ -119,18 +119,17 @@ namespace SIMPEDA_V01.Controllers
                                 select t.idTransaksi).Max();
             int newId = idTransaksi + 1;
            //int newId = (int)db.GetNewIdTransaction().FirstOrDefault()
-=======
+
             ViewBag.idSepeda = new SelectList(db.Sepedas, "idSepeda", "merkSepeda");
 
-            int idTransaksi = (from t in db.Transaksis
+            idTransaksi = (from t in db.Transaksis
                                select t.idTransaksi).Max();
             int barcodeTrans = idTransaksi + 1;
             BarcodeImage(barcodeTrans.ToString());
             ViewBag.newId = barcodeTrans;
 
-            int newId = (int)db.GetNewIdTransaction().FirstOrDefault();
+            newId = (int)db.GetNewIdTransaction().FirstOrDefault();
 
->>>>>>> c1b2a7a6c0521851941a31544e49c486be8d1bd4
             ViewBag.idTransaksi = newId;
             ViewBag.tanggal = DateTime.Now;
             ViewBag.status = false;
