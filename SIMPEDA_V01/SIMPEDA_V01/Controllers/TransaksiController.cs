@@ -111,26 +111,19 @@ namespace SIMPEDA_V01.Controllers
             ViewBag.idPeminjamDosen = new SelectList(db.Dosens, "NIP", "namaDosen");
             ViewBag.idPeminjamMhs = new SelectList(db.Mahasiswas, "NRP", "namaMhs");
             ViewBag.idPeminjamPegawai = new SelectList(db.Pegawais, "idPegawai", "namaPegawai");
-<<<<<<< HEAD
             ViewBag.idSepeda = (from s in db.Sepedas
                                where s.idShelter.Equals(idShelter) && s.idSepeda.Equals(idSepeda)
                                select s.idSepeda).FirstOrDefault();
             var idTransaksi = (from t in db.Transaksis
                                 select t.idTransaksi).Max();
             int newId = idTransaksi + 1;
-           //int newId = (int)db.GetNewIdTransaction().FirstOrDefault()
-=======
-            ViewBag.idSepeda = new SelectList(db.Sepedas, "idSepeda", "merkSepeda");
-
-            int idTransaksi = (from t in db.Transaksis
-                               select t.idTransaksi).Max();
+            //int newId = (int)db.GetNewIdTransaction().FirstOrDefault()
+            //ViewBag.idSepeda = new SelectList(db.Sepedas, "idSepeda", "merkSepeda");
             int barcodeTrans = idTransaksi + 1;
             BarcodeImage(barcodeTrans.ToString());
             ViewBag.newId = barcodeTrans;
 
-            int newId = (int)db.GetNewIdTransaction().FirstOrDefault();
-
->>>>>>> c1b2a7a6c0521851941a31544e49c486be8d1bd4
+            //int newId = (int)db.GetNewIdTransaction().FirstOrDefault();
             ViewBag.idTransaksi = newId;
             ViewBag.tanggal = DateTime.Now;
             ViewBag.status = false;
@@ -156,8 +149,7 @@ namespace SIMPEDA_V01.Controllers
             ViewBag.idPeminjamMhs = new SelectList(db.Mahasiswas, "NRP", "namaMhs", transaksi.idPeminjamMhs);
             ViewBag.idPeminjamPegawai = new SelectList(db.Pegawais, "idPegawai", "namaPegawai", transaksi.idPeminjamPegawai);
             ViewBag.idSepeda = new SelectList(db.Sepedas, "idSepeda", "merkSepeda", transaksi.idSepeda);
-
-
+           
             return View(transaksi);
         }
 
@@ -176,7 +168,13 @@ namespace SIMPEDA_V01.Controllers
             ViewBag.idPeminjamDosen = new SelectList(db.Dosens, "NIP", "namaDosen", transaksi.idPeminjamDosen);
             ViewBag.idPeminjamMhs = new SelectList(db.Mahasiswas, "NRP", "namaMhs", transaksi.idPeminjamMhs);
             ViewBag.idPeminjamPegawai = new SelectList(db.Pegawais, "idPegawai", "namaPegawai", transaksi.idPeminjamPegawai);
-            ViewBag.idSepeda = new SelectList(db.Sepedas, "idSepeda", "merkSepeda", transaksi.idSepeda);
+            //ViewBag.idSepeda = new SelectList(db.Sepedas, "idSepeda", "merkSepeda", transaksi.idSepeda);
+            ViewBag.idSepeda = (from t in db.Transaksis
+                                from s in db.Sepedas
+                                where t.idSepeda == s.idSepeda && t.idTransaksi == id
+                                select s.idSepeda).FirstOrDefault();
+
+            ViewBag.tanggalKembali = DateTime.Now;
             return View(transaksi);
         }
 

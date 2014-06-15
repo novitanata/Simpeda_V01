@@ -44,3 +44,5 @@ E:\Deasy\SIMPEDA_V01\SIMPEDA_V01Test\obj\Debug\SIMPEDA_V01Test.csprojResolveAsse
 E:\Deasy\SIMPEDA_V01\SIMPEDA_V01Test\obj\Debug\SIMPEDA_V01Test.dll
 E:\Deasy\SIMPEDA_V01\SIMPEDA_V01Test\obj\Debug\SIMPEDA_V01Test.pdb
 E:\Deasy\SIMPEDA_V01\SIMPEDA_V01Test\bin\Debug\zxing.dll
+C:\Users\User\Documents\Simpeda_V01\SIMPEDA_V01\SIMPEDA_V01Test\bin\Debug\Gma.QrCodeNet.Encoding.dll
+C:\Users\User\Documents\Simpeda_V01\SIMPEDA_V01\SIMPEDA_V01Test\bin\Debug\zxing.dll

@@ -68,3 +68,8 @@ E:\Deasy\SIMPEDA_V01\SIMPEDA_V01\bin\System.Web.Mvc.xml
 E:\Deasy\SIMPEDA_V01\SIMPEDA_V01\obj\Debug\SIMPEDA_V01.csprojResolveAssemblyReference.cache
 E:\Deasy\SIMPEDA_V01\SIMPEDA_V01\obj\Debug\SIMPEDA_V01.dll
 E:\Deasy\SIMPEDA_V01\SIMPEDA_V01\obj\Debug\SIMPEDA_V01.pdb
+C:\Users\User\Documents\Simpeda_V01\SIMPEDA_V01\SIMPEDA_V01\bin\Antlr3.Runtime.dll
+C:\Users\User\Documents\Simpeda_V01\SIMPEDA_V01\SIMPEDA_V01\bin\Gma.QrCodeNet.Encoding.dll
+C:\Users\User\Documents\Simpeda_V01\SIMPEDA_V01\SIMPEDA_V01\bin\Newtonsoft.Json.dll
+C:\Users\User\Documents\Simpeda_V01\SIMPEDA_V01\SIMPEDA_V01\bin\WebGrease.dll
+C:\Users\User\Documents\Simpeda_V01\SIMPEDA_V01\SIMPEDA_V01\bin\zxing.dll

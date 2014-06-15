@@ -19,7 +19,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.idPeminjamDosen, "idPeminjamDosen", new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("idPeminjamDosen", String.Empty)
+                @Html.TextBoxFor(model => model.idPeminjamDosen,new { @readonly = "true"})
                 @Html.ValidationMessageFor(model => model.idPeminjamDosen)
             </div>
         </div>
@@ -27,7 +27,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.idPeminjamPegawai, "idPeminjamPegawai", new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("idPeminjamPegawai", String.Empty)
+                @Html.TextBoxFor(model => model.idPeminjamPegawai,new { @readonly = "true"})
                 @Html.ValidationMessageFor(model => model.idPeminjamPegawai)
             </div>
         </div>
@@ -35,7 +35,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.idPeminjamMhs, "idPeminjamMhs", new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("idPeminjamMhs", String.Empty)
+                @Html.TextBoxFor(model => model.idPeminjamMhs,new { @readonly = "true"})
                 @Html.ValidationMessageFor(model => model.idPeminjamMhs)
             </div>
         </div>
@@ -43,7 +43,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.idSepeda, "idSepeda", new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("idSepeda", String.Empty)
+                @Html.TextBoxFor(model => model.idSepeda,new { @Value=ViewBag.idSepeda, @readonly = "true"})
                 @Html.ValidationMessageFor(model => model.idSepeda)
             </div>
         </div>
@@ -59,7 +59,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.waktuKembali, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.waktuKembali)
+                @Html.TextBoxFor(model => model.waktuKembali,new { @Value=ViewBag.tanggalKembali, @readonly = "true"})
                 @Html.ValidationMessageFor(model => model.waktuKembali)
             </div>
         </div>
