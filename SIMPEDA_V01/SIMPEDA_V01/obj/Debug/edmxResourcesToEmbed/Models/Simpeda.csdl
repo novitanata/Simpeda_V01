@@ -15,6 +15,7 @@
     <NavigationProperty Name="Transaksis" Relationship="Self.FK_Transaksi_Dosen1" FromRole="Dosen" ToRole="Transaksi" />
     <Property Name="barcodeImageDosen" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="barcodeDosen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="password_Dosen" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="JurusanInstansi">
     <Key>
@@ -43,6 +44,7 @@
     <NavigationProperty Name="Transaksis" Relationship="Self.FK_Transaksi_Mahasiswa" FromRole="Mahasiswa" ToRole="Transaksi" />
     <Property Name="barcodeImageMhs" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="barcodeMhs" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="password_Mhs" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="Pegawai">
     <Key>
@@ -60,6 +62,7 @@
     <NavigationProperty Name="Transaksis" Relationship="Self.FK_Transaksi_Pegawai" FromRole="Pegawai" ToRole="Transaksi" />
     <Property Name="barcodeImagePegawai" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="barcodePegawai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="password_Pegawai" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="Sepeda">
     <Key>

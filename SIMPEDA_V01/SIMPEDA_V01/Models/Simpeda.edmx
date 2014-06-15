@@ -4,80 +4,124 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="SimpedaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="Dosen">
+    <Schema Namespace="SimpedaModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="SimpedaModelStoreContainer">
+          <EntitySet Name="Dosens" EntityType="SimpedaModel.Store.Dosens" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="JurusanInstansis" EntityType="SimpedaModel.Store.JurusanInstansis" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Mahasiswas" EntityType="SimpedaModel.Store.Mahasiswas" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Pegawais" EntityType="SimpedaModel.Store.Pegawais" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Sepedas" EntityType="SimpedaModel.Store.Sepedas" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Shelters" EntityType="SimpedaModel.Store.Shelters" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Transaksis" EntityType="SimpedaModel.Store.Transaksis" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Dosen_JurusanInstansi" Association="SimpedaModel.Store.FK_Dosen_JurusanInstansi">
+            <End Role="JurusanInstansis" EntitySet="JurusanInstansis" />
+            <End Role="Dosens" EntitySet="Dosens" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Mahasiswa_JurusanInstansi" Association="SimpedaModel.Store.FK_Mahasiswa_JurusanInstansi">
+            <End Role="JurusanInstansis" EntitySet="JurusanInstansis" />
+            <End Role="Mahasiswas" EntitySet="Mahasiswas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pegawai_JurusanInstansi" Association="SimpedaModel.Store.FK_Pegawai_JurusanInstansi">
+            <End Role="JurusanInstansis" EntitySet="JurusanInstansis" />
+            <End Role="Pegawais" EntitySet="Pegawais" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sepeda_Shelter" Association="SimpedaModel.Store.FK_Sepeda_Shelter">
+            <End Role="Shelters" EntitySet="Shelters" />
+            <End Role="Sepedas" EntitySet="Sepedas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Transaksi_Dosen1" Association="SimpedaModel.Store.FK_Transaksi_Dosen1">
+            <End Role="Dosens" EntitySet="Dosens" />
+            <End Role="Transaksis" EntitySet="Transaksis" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Transaksi_Mahasiswa" Association="SimpedaModel.Store.FK_Transaksi_Mahasiswa">
+            <End Role="Mahasiswas" EntitySet="Mahasiswas" />
+            <End Role="Transaksis" EntitySet="Transaksis" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Transaksi_Pegawai" Association="SimpedaModel.Store.FK_Transaksi_Pegawai">
+            <End Role="Pegawais" EntitySet="Pegawais" />
+            <End Role="Transaksis" EntitySet="Transaksis" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Transaksi_Sepeda" Association="SimpedaModel.Store.FK_Transaksi_Sepeda">
+            <End Role="Sepedas" EntitySet="Sepedas" />
+            <End Role="Transaksis" EntitySet="Transaksis" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Dosens">
           <Key>
             <PropertyRef Name="NIP" />
           </Key>
-          <Property Name="NIP" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="NIP" Type="varchar" Nullable="false" MaxLength="50" />
           <Property Name="idJurusan" Type="int" Nullable="false" />
-          <Property Name="namaDosen" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="teleponDosen" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="alamatDosen" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="emailDosen" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="password_Dosen" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="namaDosen" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="teleponDosen" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="alamatDosen" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="emailDosen" Type="varchar" Nullable="false" MaxLength="50" />
           <Property Name="poinPunishmentDosen" Type="int" />
           <Property Name="barcodeImageDosen" Type="varchar(max)" />
           <Property Name="barcodeDosen" Type="nvarchar" MaxLength="50" />
         </EntityType>
-        <EntityType Name="JurusanInstansi">
+        <EntityType Name="JurusanInstansis">
           <Key>
             <PropertyRef Name="idJurusan" />
           </Key>
           <Property Name="idJurusan" Type="int" Nullable="false" />
-          <Property Name="namaJurusan" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="alamatJurusan" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="teleponJurusan" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="namaJurusan" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="alamatJurusan" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="teleponJurusan" Type="varchar" Nullable="false" MaxLength="50" />
         </EntityType>
-        <EntityType Name="Mahasiswa">
+        <EntityType Name="Mahasiswas">
           <Key>
             <PropertyRef Name="NRP" />
           </Key>
-          <Property Name="NRP" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="NRP" Type="varchar" Nullable="false" MaxLength="50" />
           <Property Name="idJurusan" Type="int" Nullable="false" />
-          <Property Name="namaMhs" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="teleponMhs" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="alamatMhs" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="emailMhs" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="password_Mhs" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="namaMhs" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="teleponMhs" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="alamatMhs" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="emailMhs" Type="varchar" Nullable="false" MaxLength="50" />
           <Property Name="poinPunishmentMhs" Type="int" />
           <Property Name="barcodeImageMhs" Type="varchar(max)" />
           <Property Name="barcodeMhs" Type="nvarchar" MaxLength="50" />
         </EntityType>
-        <EntityType Name="Pegawai">
+        <EntityType Name="Pegawais">
           <Key>
             <PropertyRef Name="idPegawai" />
           </Key>
-          <Property Name="idPegawai" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="idPegawai" Type="varchar" Nullable="false" MaxLength="50" />
           <Property Name="idJurusan" Type="int" Nullable="false" />
-          <Property Name="namaPegawai" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="jabatan" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="teleponPegawai" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="alamatPegawai" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="emailPegawai" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="password_Pegawai" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="namaPegawai" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="jabatan" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="teleponPegawai" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="alamatPegawai" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="emailPegawai" Type="varchar" Nullable="false" MaxLength="50" />
           <Property Name="poinPunishmetPegawai" Type="int" />
           <Property Name="barcodeImagePegawai" Type="varchar(max)" />
           <Property Name="barcodePegawai" Type="nvarchar" MaxLength="50" />
         </EntityType>
-        <EntityType Name="Sepeda">
+        <EntityType Name="Sepedas">
           <Key>
             <PropertyRef Name="idSepeda" />
           </Key>
           <Property Name="idSepeda" Type="int" Nullable="false" />
           <Property Name="idShelter" Type="int" Nullable="false" />
-          <Property Name="merkSepeda" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="warnaSepeda" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="merkSepeda" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="warnaSepeda" Type="varchar" Nullable="false" MaxLength="50" />
           <Property Name="ketersediaan" Type="smallint" Nullable="false" />
           <Property Name="keterangan" Type="varchar" MaxLength="100" />
         </EntityType>
-        <EntityType Name="Shelter">
+        <EntityType Name="Shelters">
           <Key>
             <PropertyRef Name="idShelter" />
           </Key>
           <Property Name="idShelter" Type="int" Nullable="false" />
-          <Property Name="lokasiShelter" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="lokasiShelter" Type="varchar" Nullable="false" MaxLength="50" />
           <Property Name="deskripsiShelter" Type="varchar(max)" />
           <Property Name="fotoshelter" Type="varchar" MaxLength="255" />
         </EntityType>
-        <EntityType Name="Transaksi">
+        <EntityType Name="Transaksis">
           <Key>
             <PropertyRef Name="idTransaksi" />
           </Key>
@@ -88,153 +132,105 @@
           <Property Name="idSepeda" Type="int" Nullable="false" />
           <Property Name="waktuPinjam" Type="datetime" />
           <Property Name="waktuKembali" Type="datetime" />
-          <Property Name="status" Type="int" Nullable="false" />
+          <Property Name="status" Type="smallint" Nullable="false" />
           <Property Name="shelterKembali" Type="int" />
         </EntityType>
         <Association Name="FK_Dosen_JurusanInstansi">
-          <End Role="JurusanInstansi" Type="Self.JurusanInstansi" Multiplicity="1" />
-          <End Role="Dosen" Type="Self.Dosen" Multiplicity="*" />
+          <End Role="JurusanInstansis" Type="SimpedaModel.Store.JurusanInstansis" Multiplicity="1" />
+          <End Role="Dosens" Type="SimpedaModel.Store.Dosens" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="JurusanInstansi">
+            <Principal Role="JurusanInstansis">
               <PropertyRef Name="idJurusan" />
             </Principal>
-            <Dependent Role="Dosen">
+            <Dependent Role="Dosens">
               <PropertyRef Name="idJurusan" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Mahasiswa_JurusanInstansi">
-          <End Role="JurusanInstansi" Type="Self.JurusanInstansi" Multiplicity="1" />
-          <End Role="Mahasiswa" Type="Self.Mahasiswa" Multiplicity="*" />
+          <End Role="JurusanInstansis" Type="SimpedaModel.Store.JurusanInstansis" Multiplicity="1" />
+          <End Role="Mahasiswas" Type="SimpedaModel.Store.Mahasiswas" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="JurusanInstansi">
+            <Principal Role="JurusanInstansis">
               <PropertyRef Name="idJurusan" />
             </Principal>
-            <Dependent Role="Mahasiswa">
+            <Dependent Role="Mahasiswas">
               <PropertyRef Name="idJurusan" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Pegawai_JurusanInstansi">
-          <End Role="JurusanInstansi" Type="Self.JurusanInstansi" Multiplicity="1" />
-          <End Role="Pegawai" Type="Self.Pegawai" Multiplicity="*" />
+          <End Role="JurusanInstansis" Type="SimpedaModel.Store.JurusanInstansis" Multiplicity="1" />
+          <End Role="Pegawais" Type="SimpedaModel.Store.Pegawais" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="JurusanInstansi">
+            <Principal Role="JurusanInstansis">
               <PropertyRef Name="idJurusan" />
             </Principal>
-            <Dependent Role="Pegawai">
+            <Dependent Role="Pegawais">
               <PropertyRef Name="idJurusan" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Sepeda_Shelter">
-          <End Role="Shelter" Type="Self.Shelter" Multiplicity="1" />
-          <End Role="Sepeda" Type="Self.Sepeda" Multiplicity="*" />
+          <End Role="Shelters" Type="SimpedaModel.Store.Shelters" Multiplicity="1" />
+          <End Role="Sepedas" Type="SimpedaModel.Store.Sepedas" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Shelter">
+            <Principal Role="Shelters">
               <PropertyRef Name="idShelter" />
             </Principal>
-            <Dependent Role="Sepeda">
+            <Dependent Role="Sepedas">
               <PropertyRef Name="idShelter" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Transaksi_Dosen1">
-          <End Role="Dosen" Type="Self.Dosen" Multiplicity="0..1" />
-          <End Role="Transaksi" Type="Self.Transaksi" Multiplicity="*" />
+          <End Role="Dosens" Type="SimpedaModel.Store.Dosens" Multiplicity="0..1" />
+          <End Role="Transaksis" Type="SimpedaModel.Store.Transaksis" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Dosen">
+            <Principal Role="Dosens">
               <PropertyRef Name="NIP" />
             </Principal>
-            <Dependent Role="Transaksi">
+            <Dependent Role="Transaksis">
               <PropertyRef Name="idPeminjamDosen" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Transaksi_Mahasiswa">
-          <End Role="Mahasiswa" Type="Self.Mahasiswa" Multiplicity="0..1" />
-          <End Role="Transaksi" Type="Self.Transaksi" Multiplicity="*" />
+          <End Role="Mahasiswas" Type="SimpedaModel.Store.Mahasiswas" Multiplicity="0..1" />
+          <End Role="Transaksis" Type="SimpedaModel.Store.Transaksis" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Mahasiswa">
+            <Principal Role="Mahasiswas">
               <PropertyRef Name="NRP" />
             </Principal>
-            <Dependent Role="Transaksi">
+            <Dependent Role="Transaksis">
               <PropertyRef Name="idPeminjamMhs" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Transaksi_Pegawai">
-          <End Role="Pegawai" Type="Self.Pegawai" Multiplicity="0..1" />
-          <End Role="Transaksi" Type="Self.Transaksi" Multiplicity="*" />
+          <End Role="Pegawais" Type="SimpedaModel.Store.Pegawais" Multiplicity="0..1" />
+          <End Role="Transaksis" Type="SimpedaModel.Store.Transaksis" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Pegawai">
+            <Principal Role="Pegawais">
               <PropertyRef Name="idPegawai" />
             </Principal>
-            <Dependent Role="Transaksi">
+            <Dependent Role="Transaksis">
               <PropertyRef Name="idPeminjamPegawai" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Transaksi_Sepeda">
-          <End Role="Sepeda" Type="Self.Sepeda" Multiplicity="1" />
-          <End Role="Transaksi" Type="Self.Transaksi" Multiplicity="*" />
+          <End Role="Sepedas" Type="SimpedaModel.Store.Sepedas" Multiplicity="1" />
+          <End Role="Transaksis" Type="SimpedaModel.Store.Transaksis" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Sepeda">
+            <Principal Role="Sepedas">
               <PropertyRef Name="idSepeda" />
             </Principal>
-            <Dependent Role="Transaksi">
+            <Dependent Role="Transaksis">
               <PropertyRef Name="idSepeda" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Function Name="GetLokasiShelter" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="idShelter" Type="int" Mode="In" />
-        </Function>
-        <Function Name="GetNamaShelter" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="idShelter" Type="int" Mode="In" />
-        </Function>
-        <Function Name="GetNewIdTransaction" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
-        <EntityContainer Name="SimpedaModelStoreContainer">
-          <EntitySet Name="Dosen" EntityType="Self.Dosen" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="JurusanInstansi" EntityType="Self.JurusanInstansi" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Mahasiswa" EntityType="Self.Mahasiswa" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Pegawai" EntityType="Self.Pegawai" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Sepeda" EntityType="Self.Sepeda" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Shelter" EntityType="Self.Shelter" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Transaksi" EntityType="Self.Transaksi" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK_Dosen_JurusanInstansi" Association="Self.FK_Dosen_JurusanInstansi">
-            <End Role="JurusanInstansi" EntitySet="JurusanInstansi" />
-            <End Role="Dosen" EntitySet="Dosen" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Mahasiswa_JurusanInstansi" Association="Self.FK_Mahasiswa_JurusanInstansi">
-            <End Role="JurusanInstansi" EntitySet="JurusanInstansi" />
-            <End Role="Mahasiswa" EntitySet="Mahasiswa" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Pegawai_JurusanInstansi" Association="Self.FK_Pegawai_JurusanInstansi">
-            <End Role="JurusanInstansi" EntitySet="JurusanInstansi" />
-            <End Role="Pegawai" EntitySet="Pegawai" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Sepeda_Shelter" Association="Self.FK_Sepeda_Shelter">
-            <End Role="Shelter" EntitySet="Shelter" />
-            <End Role="Sepeda" EntitySet="Sepeda" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Transaksi_Dosen1" Association="Self.FK_Transaksi_Dosen1">
-            <End Role="Dosen" EntitySet="Dosen" />
-            <End Role="Transaksi" EntitySet="Transaksi" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Transaksi_Mahasiswa" Association="Self.FK_Transaksi_Mahasiswa">
-            <End Role="Mahasiswa" EntitySet="Mahasiswa" />
-            <End Role="Transaksi" EntitySet="Transaksi" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Transaksi_Pegawai" Association="Self.FK_Transaksi_Pegawai">
-            <End Role="Pegawai" EntitySet="Pegawai" />
-            <End Role="Transaksi" EntitySet="Transaksi" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Transaksi_Sepeda" Association="Self.FK_Transaksi_Sepeda">
-            <End Role="Sepeda" EntitySet="Sepeda" />
-            <End Role="Transaksi" EntitySet="Transaksi" />
-          </AssociationSet>
-        </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
@@ -254,6 +250,7 @@
           <NavigationProperty Name="Transaksis" Relationship="Self.FK_Transaksi_Dosen1" FromRole="Dosen" ToRole="Transaksi" />
           <Property Name="barcodeImageDosen" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="barcodeDosen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="password_Dosen" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="JurusanInstansi">
           <Key>
@@ -282,6 +279,7 @@
           <NavigationProperty Name="Transaksis" Relationship="Self.FK_Transaksi_Mahasiswa" FromRole="Mahasiswa" ToRole="Transaksi" />
           <Property Name="barcodeImageMhs" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="barcodeMhs" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="password_Mhs" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Pegawai">
           <Key>
@@ -299,6 +297,7 @@
           <NavigationProperty Name="Transaksis" Relationship="Self.FK_Transaksi_Pegawai" FromRole="Pegawai" ToRole="Transaksi" />
           <Property Name="barcodeImagePegawai" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="barcodePegawai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="password_Pegawai" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Sepeda">
           <Key>
@@ -489,107 +488,106 @@
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
-      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="SimpedaModelStoreContainer" CdmEntityContainer="SimpedaEntities">
-          <EntitySetMapping Name="Dosens">
-            <EntityTypeMapping TypeName="SimpedaModel.Dosen">
-              <MappingFragment StoreEntitySet="Dosen">
-                <ScalarProperty Name="barcodeDosen" ColumnName="barcodeDosen" />
-                <ScalarProperty Name="barcodeImageDosen" ColumnName="barcodeImageDosen" />
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SimpedaModelStoreContainer" CdmEntityContainer="SimpedaEntities">
+    <EntitySetMapping Name="Dosens">
+      <EntityTypeMapping TypeName="IsTypeOf(SimpedaModel.Dosen)">
+        <MappingFragment StoreEntitySet="Dosens">
+          <ScalarProperty Name="password_Dosen" ColumnName="password_Dosen" />
                 <ScalarProperty Name="NIP" ColumnName="NIP" />
-                <ScalarProperty Name="idJurusan" ColumnName="idJurusan" />
-                <ScalarProperty Name="namaDosen" ColumnName="namaDosen" />
-                <ScalarProperty Name="teleponDosen" ColumnName="teleponDosen" />
-                <ScalarProperty Name="alamatDosen" ColumnName="alamatDosen" />
-                <ScalarProperty Name="emailDosen" ColumnName="emailDosen" />
-                <ScalarProperty Name="poinPunishmentDosen" ColumnName="poinPunishmentDosen" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="JurusanInstansis">
-            <EntityTypeMapping TypeName="SimpedaModel.JurusanInstansi">
-              <MappingFragment StoreEntitySet="JurusanInstansi">
-                <ScalarProperty Name="idJurusan" ColumnName="idJurusan" />
-                <ScalarProperty Name="namaJurusan" ColumnName="namaJurusan" />
-                <ScalarProperty Name="alamatJurusan" ColumnName="alamatJurusan" />
-                <ScalarProperty Name="teleponJurusan" ColumnName="teleponJurusan" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Mahasiswas">
-            <EntityTypeMapping TypeName="SimpedaModel.Mahasiswa">
-              <MappingFragment StoreEntitySet="Mahasiswa">
-                <ScalarProperty Name="barcodeMhs" ColumnName="barcodeMhs" />
-                <ScalarProperty Name="barcodeImageMhs" ColumnName="barcodeImageMhs" />
+          <ScalarProperty Name="idJurusan" ColumnName="idJurusan" />
+          <ScalarProperty Name="namaDosen" ColumnName="namaDosen" />
+          <ScalarProperty Name="teleponDosen" ColumnName="teleponDosen" />
+          <ScalarProperty Name="alamatDosen" ColumnName="alamatDosen" />
+          <ScalarProperty Name="emailDosen" ColumnName="emailDosen" />
+          <ScalarProperty Name="poinPunishmentDosen" ColumnName="poinPunishmentDosen" />
+          <ScalarProperty Name="barcodeImageDosen" ColumnName="barcodeImageDosen" />
+          <ScalarProperty Name="barcodeDosen" ColumnName="barcodeDosen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JurusanInstansis">
+      <EntityTypeMapping TypeName="IsTypeOf(SimpedaModel.JurusanInstansi)">
+        <MappingFragment StoreEntitySet="JurusanInstansis">
+          <ScalarProperty Name="idJurusan" ColumnName="idJurusan" />
+          <ScalarProperty Name="namaJurusan" ColumnName="namaJurusan" />
+          <ScalarProperty Name="alamatJurusan" ColumnName="alamatJurusan" />
+          <ScalarProperty Name="teleponJurusan" ColumnName="teleponJurusan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mahasiswas">
+      <EntityTypeMapping TypeName="IsTypeOf(SimpedaModel.Mahasiswa)">
+        <MappingFragment StoreEntitySet="Mahasiswas">
+          <ScalarProperty Name="password_Mhs" ColumnName="password_Mhs" />
                 <ScalarProperty Name="NRP" ColumnName="NRP" />
-                <ScalarProperty Name="idJurusan" ColumnName="idJurusan" />
-                <ScalarProperty Name="namaMhs" ColumnName="namaMhs" />
-                <ScalarProperty Name="teleponMhs" ColumnName="teleponMhs" />
-                <ScalarProperty Name="alamatMhs" ColumnName="alamatMhs" />
-                <ScalarProperty Name="emailMhs" ColumnName="emailMhs" />
-                <ScalarProperty Name="poinPunishmentMhs" ColumnName="poinPunishmentMhs" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Pegawais">
-            <EntityTypeMapping TypeName="SimpedaModel.Pegawai">
-              <MappingFragment StoreEntitySet="Pegawai">
-                <ScalarProperty Name="barcodePegawai" ColumnName="barcodePegawai" />
-                <ScalarProperty Name="barcodeImagePegawai" ColumnName="barcodeImagePegawai" />
+          <ScalarProperty Name="idJurusan" ColumnName="idJurusan" />
+          <ScalarProperty Name="namaMhs" ColumnName="namaMhs" />
+          <ScalarProperty Name="teleponMhs" ColumnName="teleponMhs" />
+          <ScalarProperty Name="alamatMhs" ColumnName="alamatMhs" />
+          <ScalarProperty Name="emailMhs" ColumnName="emailMhs" />
+          <ScalarProperty Name="poinPunishmentMhs" ColumnName="poinPunishmentMhs" />
+          <ScalarProperty Name="barcodeImageMhs" ColumnName="barcodeImageMhs" />
+          <ScalarProperty Name="barcodeMhs" ColumnName="barcodeMhs" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pegawais">
+      <EntityTypeMapping TypeName="IsTypeOf(SimpedaModel.Pegawai)">
+        <MappingFragment StoreEntitySet="Pegawais">
+          <ScalarProperty Name="password_Pegawai" ColumnName="password_Pegawai" />
                 <ScalarProperty Name="idPegawai" ColumnName="idPegawai" />
-                <ScalarProperty Name="idJurusan" ColumnName="idJurusan" />
-                <ScalarProperty Name="namaPegawai" ColumnName="namaPegawai" />
-                <ScalarProperty Name="jabatan" ColumnName="jabatan" />
-                <ScalarProperty Name="teleponPegawai" ColumnName="teleponPegawai" />
-                <ScalarProperty Name="alamatPegawai" ColumnName="alamatPegawai" />
-                <ScalarProperty Name="emailPegawai" ColumnName="emailPegawai" />
-                <ScalarProperty Name="poinPunishmetPegawai" ColumnName="poinPunishmetPegawai" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Sepedas">
-            <EntityTypeMapping TypeName="SimpedaModel.Sepeda">
-              <MappingFragment StoreEntitySet="Sepeda">
-                <ScalarProperty Name="idSepeda" ColumnName="idSepeda" />
-                <ScalarProperty Name="idShelter" ColumnName="idShelter" />
-                <ScalarProperty Name="merkSepeda" ColumnName="merkSepeda" />
-                <ScalarProperty Name="warnaSepeda" ColumnName="warnaSepeda" />
-                <ScalarProperty Name="ketersediaan" ColumnName="ketersediaan" />
-                <ScalarProperty Name="keterangan" ColumnName="keterangan" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Shelters">
-            <EntityTypeMapping TypeName="SimpedaModel.Shelter">
-              <MappingFragment StoreEntitySet="Shelter">
-                <ScalarProperty Name="idShelter" ColumnName="idShelter" />
-                <ScalarProperty Name="lokasiShelter" ColumnName="lokasiShelter" />
-                <ScalarProperty Name="deskripsiShelter" ColumnName="deskripsiShelter" />
-                <ScalarProperty Name="fotoshelter" ColumnName="fotoshelter" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Transaksis">
-            <EntityTypeMapping TypeName="SimpedaModel.Transaksi">
-              <MappingFragment StoreEntitySet="Transaksi">
-                <ScalarProperty Name="idTransaksi" ColumnName="idTransaksi" />
-                <ScalarProperty Name="idPeminjamDosen" ColumnName="idPeminjamDosen" />
-                <ScalarProperty Name="idPeminjamPegawai" ColumnName="idPeminjamPegawai" />
-                <ScalarProperty Name="idPeminjamMhs" ColumnName="idPeminjamMhs" />
-                <ScalarProperty Name="idSepeda" ColumnName="idSepeda" />
-                <ScalarProperty Name="waktuPinjam" ColumnName="waktuPinjam" />
-                <ScalarProperty Name="waktuKembali" ColumnName="waktuKembali" />
-                <ScalarProperty Name="status" ColumnName="status" />
-                <ScalarProperty Name="shelterKembali" ColumnName="shelterKembali" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="GetNewIdTransaction" FunctionName="SimpedaModel.Store.GetNewIdTransaction" />
-          <FunctionImportMapping FunctionImportName="GetLokasiShelter" FunctionName="SimpedaModel.Store.GetLokasiShelter" />
-          <FunctionImportMapping FunctionImportName="GetNamaShelter" FunctionName="SimpedaModel.Store.GetNamaShelter" />
-        </EntityContainerMapping>
-      </Mapping>
-    </edmx:Mappings>
+          <ScalarProperty Name="idJurusan" ColumnName="idJurusan" />
+          <ScalarProperty Name="namaPegawai" ColumnName="namaPegawai" />
+          <ScalarProperty Name="jabatan" ColumnName="jabatan" />
+          <ScalarProperty Name="teleponPegawai" ColumnName="teleponPegawai" />
+          <ScalarProperty Name="alamatPegawai" ColumnName="alamatPegawai" />
+          <ScalarProperty Name="emailPegawai" ColumnName="emailPegawai" />
+          <ScalarProperty Name="poinPunishmetPegawai" ColumnName="poinPunishmetPegawai" />
+          <ScalarProperty Name="barcodeImagePegawai" ColumnName="barcodeImagePegawai" />
+          <ScalarProperty Name="barcodePegawai" ColumnName="barcodePegawai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sepedas">
+      <EntityTypeMapping TypeName="IsTypeOf(SimpedaModel.Sepeda)">
+        <MappingFragment StoreEntitySet="Sepedas">
+          <ScalarProperty Name="idSepeda" ColumnName="idSepeda" />
+          <ScalarProperty Name="idShelter" ColumnName="idShelter" />
+          <ScalarProperty Name="merkSepeda" ColumnName="merkSepeda" />
+          <ScalarProperty Name="warnaSepeda" ColumnName="warnaSepeda" />
+          <ScalarProperty Name="ketersediaan" ColumnName="ketersediaan" />
+          <ScalarProperty Name="keterangan" ColumnName="keterangan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shelters">
+      <EntityTypeMapping TypeName="IsTypeOf(SimpedaModel.Shelter)">
+        <MappingFragment StoreEntitySet="Shelters">
+          <ScalarProperty Name="idShelter" ColumnName="idShelter" />
+          <ScalarProperty Name="lokasiShelter" ColumnName="lokasiShelter" />
+          <ScalarProperty Name="deskripsiShelter" ColumnName="deskripsiShelter" />
+          <ScalarProperty Name="fotoshelter" ColumnName="fotoshelter" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Transaksis">
+      <EntityTypeMapping TypeName="IsTypeOf(SimpedaModel.Transaksi)">
+        <MappingFragment StoreEntitySet="Transaksis">
+          <ScalarProperty Name="idTransaksi" ColumnName="idTransaksi" />
+          <ScalarProperty Name="idPeminjamDosen" ColumnName="idPeminjamDosen" />
+          <ScalarProperty Name="idPeminjamPegawai" ColumnName="idPeminjamPegawai" />
+          <ScalarProperty Name="idPeminjamMhs" ColumnName="idPeminjamMhs" />
+          <ScalarProperty Name="idSepeda" ColumnName="idSepeda" />
+          <ScalarProperty Name="waktuPinjam" ColumnName="waktuPinjam" />
+          <ScalarProperty Name="waktuKembali" ColumnName="waktuKembali" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="shelterKembali" ColumnName="shelterKembali" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
   <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">

@@ -2,10 +2,9 @@
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="SimpedaModelStoreContainer" CdmEntityContainer="SimpedaEntities">
     <EntitySetMapping Name="Dosens">
-      <EntityTypeMapping TypeName="SimpedaModel.Dosen">
-        <MappingFragment StoreEntitySet="Dosen">
-          <ScalarProperty Name="barcodeDosen" ColumnName="barcodeDosen" />
-          <ScalarProperty Name="barcodeImageDosen" ColumnName="barcodeImageDosen" />
+      <EntityTypeMapping TypeName="IsTypeOf(SimpedaModel.Dosen)">
+        <MappingFragment StoreEntitySet="Dosens">
+          <ScalarProperty Name="password_Dosen" ColumnName="password_Dosen" />
           <ScalarProperty Name="NIP" ColumnName="NIP" />
           <ScalarProperty Name="idJurusan" ColumnName="idJurusan" />
           <ScalarProperty Name="namaDosen" ColumnName="namaDosen" />
@@ -13,12 +12,14 @@
           <ScalarProperty Name="alamatDosen" ColumnName="alamatDosen" />
           <ScalarProperty Name="emailDosen" ColumnName="emailDosen" />
           <ScalarProperty Name="poinPunishmentDosen" ColumnName="poinPunishmentDosen" />
+          <ScalarProperty Name="barcodeImageDosen" ColumnName="barcodeImageDosen" />
+          <ScalarProperty Name="barcodeDosen" ColumnName="barcodeDosen" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="JurusanInstansis">
-      <EntityTypeMapping TypeName="SimpedaModel.JurusanInstansi">
-        <MappingFragment StoreEntitySet="JurusanInstansi">
+      <EntityTypeMapping TypeName="IsTypeOf(SimpedaModel.JurusanInstansi)">
+        <MappingFragment StoreEntitySet="JurusanInstansis">
           <ScalarProperty Name="idJurusan" ColumnName="idJurusan" />
           <ScalarProperty Name="namaJurusan" ColumnName="namaJurusan" />
           <ScalarProperty Name="alamatJurusan" ColumnName="alamatJurusan" />
@@ -27,10 +28,9 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Mahasiswas">
-      <EntityTypeMapping TypeName="SimpedaModel.Mahasiswa">
-        <MappingFragment StoreEntitySet="Mahasiswa">
-          <ScalarProperty Name="barcodeMhs" ColumnName="barcodeMhs" />
-          <ScalarProperty Name="barcodeImageMhs" ColumnName="barcodeImageMhs" />
+      <EntityTypeMapping TypeName="IsTypeOf(SimpedaModel.Mahasiswa)">
+        <MappingFragment StoreEntitySet="Mahasiswas">
+          <ScalarProperty Name="password_Mhs" ColumnName="password_Mhs" />
           <ScalarProperty Name="NRP" ColumnName="NRP" />
           <ScalarProperty Name="idJurusan" ColumnName="idJurusan" />
           <ScalarProperty Name="namaMhs" ColumnName="namaMhs" />
@@ -38,14 +38,15 @@
           <ScalarProperty Name="alamatMhs" ColumnName="alamatMhs" />
           <ScalarProperty Name="emailMhs" ColumnName="emailMhs" />
           <ScalarProperty Name="poinPunishmentMhs" ColumnName="poinPunishmentMhs" />
+          <ScalarProperty Name="barcodeImageMhs" ColumnName="barcodeImageMhs" />
+          <ScalarProperty Name="barcodeMhs" ColumnName="barcodeMhs" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Pegawais">
-      <EntityTypeMapping TypeName="SimpedaModel.Pegawai">
-        <MappingFragment StoreEntitySet="Pegawai">
-          <ScalarProperty Name="barcodePegawai" ColumnName="barcodePegawai" />
-          <ScalarProperty Name="barcodeImagePegawai" ColumnName="barcodeImagePegawai" />
+      <EntityTypeMapping TypeName="IsTypeOf(SimpedaModel.Pegawai)">
+        <MappingFragment StoreEntitySet="Pegawais">
+          <ScalarProperty Name="password_Pegawai" ColumnName="password_Pegawai" />
           <ScalarProperty Name="idPegawai" ColumnName="idPegawai" />
           <ScalarProperty Name="idJurusan" ColumnName="idJurusan" />
           <ScalarProperty Name="namaPegawai" ColumnName="namaPegawai" />
@@ -54,12 +55,14 @@
           <ScalarProperty Name="alamatPegawai" ColumnName="alamatPegawai" />
           <ScalarProperty Name="emailPegawai" ColumnName="emailPegawai" />
           <ScalarProperty Name="poinPunishmetPegawai" ColumnName="poinPunishmetPegawai" />
+          <ScalarProperty Name="barcodeImagePegawai" ColumnName="barcodeImagePegawai" />
+          <ScalarProperty Name="barcodePegawai" ColumnName="barcodePegawai" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Sepedas">
-      <EntityTypeMapping TypeName="SimpedaModel.Sepeda">
-        <MappingFragment StoreEntitySet="Sepeda">
+      <EntityTypeMapping TypeName="IsTypeOf(SimpedaModel.Sepeda)">
+        <MappingFragment StoreEntitySet="Sepedas">
           <ScalarProperty Name="idSepeda" ColumnName="idSepeda" />
           <ScalarProperty Name="idShelter" ColumnName="idShelter" />
           <ScalarProperty Name="merkSepeda" ColumnName="merkSepeda" />
@@ -70,8 +73,8 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Shelters">
-      <EntityTypeMapping TypeName="SimpedaModel.Shelter">
-        <MappingFragment StoreEntitySet="Shelter">
+      <EntityTypeMapping TypeName="IsTypeOf(SimpedaModel.Shelter)">
+        <MappingFragment StoreEntitySet="Shelters">
           <ScalarProperty Name="idShelter" ColumnName="idShelter" />
           <ScalarProperty Name="lokasiShelter" ColumnName="lokasiShelter" />
           <ScalarProperty Name="deskripsiShelter" ColumnName="deskripsiShelter" />
@@ -80,8 +83,8 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Transaksis">
-      <EntityTypeMapping TypeName="SimpedaModel.Transaksi">
-        <MappingFragment StoreEntitySet="Transaksi">
+      <EntityTypeMapping TypeName="IsTypeOf(SimpedaModel.Transaksi)">
+        <MappingFragment StoreEntitySet="Transaksis">
           <ScalarProperty Name="idTransaksi" ColumnName="idTransaksi" />
           <ScalarProperty Name="idPeminjamDosen" ColumnName="idPeminjamDosen" />
           <ScalarProperty Name="idPeminjamPegawai" ColumnName="idPeminjamPegawai" />
@@ -94,8 +97,5 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <FunctionImportMapping FunctionImportName="GetNewIdTransaction" FunctionName="SimpedaModel.Store.GetNewIdTransaction" />
-    <FunctionImportMapping FunctionImportName="GetLokasiShelter" FunctionName="SimpedaModel.Store.GetLokasiShelter" />
-    <FunctionImportMapping FunctionImportName="GetNamaShelter" FunctionName="SimpedaModel.Store.GetNamaShelter" />
   </EntityContainerMapping>
 </Mapping>
