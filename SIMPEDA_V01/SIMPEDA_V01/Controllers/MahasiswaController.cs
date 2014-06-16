@@ -36,6 +36,20 @@ namespace SIMPEDA_V01.Controllers
             return View(mahasiswa);
         }
 
+        public ActionResult DetailsSms(string id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Mahasiswa mahasiswa = db.Mahasiswas.Find(id);
+            if (mahasiswa == null)
+            {
+                return HttpNotFound();
+            }
+            return View(mahasiswa);
+        }
+
         // GET: /Mahasiswa/Create
         public ActionResult Create()
         {

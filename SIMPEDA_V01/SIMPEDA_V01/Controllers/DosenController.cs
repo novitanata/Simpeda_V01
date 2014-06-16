@@ -37,6 +37,20 @@ namespace SIMPEDA_V01.Controllers
             return View(dosen);
         }
 
+                public ActionResult DetailsSms(string id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Dosen dosen = db.Dosens.Find(id);
+            if (dosen == null)
+            {
+                return HttpNotFound();
+            }
+            return View(dosen);
+        }
+
         // GET: /Dosen/Create
         public ActionResult Create()
         {
