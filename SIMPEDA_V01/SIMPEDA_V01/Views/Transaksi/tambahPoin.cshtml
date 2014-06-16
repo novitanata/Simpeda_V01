@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>tambahPoin</title>
+</head>
+<body>
+       @foreach (var item in @ViewBag.cek) {
+       <table>
+           <tr>
+               <td>
+                   @item.idSepeda
+                   @item.idPeminjamMhs
+                   @item.idPeminjamDosen
+                   @item.idPeminjamPegawai
+               </td>
+               </tr>
+           </table>
+       }
+</body>
+</html>

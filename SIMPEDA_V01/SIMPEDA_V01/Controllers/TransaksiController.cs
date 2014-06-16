@@ -111,7 +111,39 @@ namespace SIMPEDA_V01.Controllers
 
             return View();
         }
+		
+		 public ActionResult tambahPoin()
+        {
+            var cek = from t in db.Transaksis
+                      where t.status == 0 //&& t.idPeminjamMhs.Equals(m.NRP) && t.idPeminjamDosen.Equals(d.NIP) && t.idPeminjamPegawai.Equals(p.idPegawai)
+                      select t;
 
+            ViewBag.cek = cek;
+
+            foreach (var t in cek)
+            {
+                if (t.idPeminjamMhs != null && t.Mahasiswa.NRP == t.idPeminjamMhs)
+                {
+                        t.Mahasiswa.poinPunishmentMhs = t.Mahasiswa.poinPunishmentMhs + 1;                      
+                }
+                    
+                else if (t.idPeminjamDosen != null && t.Dosen.NIP == t.idPeminjamDosen)
+                {
+                        t.Dosen.poinPunishmentDosen = t.Dosen.poinPunishmentDosen + 1;
+                }
+                else if (t.idPeminjamPegawai != null & t.Pegawai.idPegawai == t.idPeminjamPegawai)
+                { 
+                    t.Pegawai.poinPunishmetPegawai = t.Pegawai.poinPunishmetPegawai + 1; 
+                }
+                    
+            }
+            db.SaveChanges();
+
+
+
+            return View();
+        }
+		
         // GET: /Transaksi/Details/5
         public ActionResult Details(int? id)
         {
