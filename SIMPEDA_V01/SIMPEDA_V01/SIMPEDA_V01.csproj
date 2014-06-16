@@ -178,6 +178,7 @@
     <Compile Include="Controllers\DosenController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MahasiswaController.cs" />
+    <Compile Include="Controllers\MyDatabaseEntities.cs" />
     <Compile Include="Controllers\SepedaController.cs" />
     <Compile Include="Controllers\TransaksiController.cs" />
     <Compile Include="Global.asax.cs">
@@ -272,6 +273,8 @@
     <Content Include="Views\Transaksi\Edit.cshtml" />
     <Content Include="Views\Transaksi\Index.cshtml" />
     <Content Include="Views\Transaksi\ScanBarcode.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Home\AfterLogin.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

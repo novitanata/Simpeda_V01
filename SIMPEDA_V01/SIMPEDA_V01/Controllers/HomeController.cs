@@ -31,7 +31,7 @@ namespace SIMPEDA_V01.Controllers
             ViewBag.Pengembalian = "Pengembalian";
             return View();
         }
-<<<<<<< HEAD
+
         public void Capture()
         {
             var stream = Request.InputStream;
@@ -55,37 +55,30 @@ namespace SIMPEDA_V01.Controllers
             }
 
             return bytes;
-=======
+        }
+       
+        /*
+        protected void Login1_LoggingIn(object sender, LoginCancelEventArgs e)
+        {
+            //Check to see if the current user exists
+            if (Membership.GetUser() != null)
+                
+            {
+                //Check to see if the user is currently locked out
+                if (Membership.GetUser(Login1.UserName).IsLockedOut)
+                {
+                    //Get the last lockout  date from the user
+                    DateTime lastLockout = Membership.GetUser(Login1.UserName).LastLockoutDate;
+                    //Calculate the time the user should be unlocked
+                    DateTime unlockDate = lastLockout.AddMinutes(Membership.PasswordAttemptWindow);
 
-        //protected void Page_Load(object sender, EventArgs e)
-        //{ 
-        
-        //}
-
-        //protected void btnMasuk_Click(object sender, EventArgs e)
-        //{ 
-            
-        //}
-        //protected void Login1_LoggingIn(object sender, LoginCancelEventArgs e)
-        //{
-        //    //Check to see if the current user exists
-        //    if (Membership.GetUser() != null)
-        //    {
-        //        //Check to see if the user is currently locked out
-        //        if (Membership.GetUser(Login1.UserName).IsLockedOut)
-        //        {
-        //            //Get the last lockout  date from the user
-        //            DateTime lastLockout = Membership.GetUser(Login1.UserName).LastLockoutDate;
-        //            //Calculate the time the user should be unlocked
-        //            DateTime unlockDate = lastLockout.AddMinutes(Membership.PasswordAttemptWindow);
-
-        //            //Check to see if it is time to unlock the user
-        //            //if (DateTime.Now > unlockDate)
-        //            //    Membership.GetUser(Login1.UserName).UnlockUser();
-        //        }
-        //    }
-        //}
-       // public virtual bool IsLockedOut { get; }
+                    //Check to see if it is time to unlock the user
+                    //if (DateTime.Now > unlockDate)
+                    //    Membership.GetUser(Login1.UserName).UnlockUser();
+                }
+            }
+        }
+        public virtual bool IsLockedOut { get; }
         public bool ValidateUser(string idUser, string passwordUser)
         {
             bool ret = false;
@@ -119,7 +112,43 @@ namespace SIMPEDA_V01.Controllers
             }
 
             return ret;
->>>>>>> cd300630e9d18d5bb184536fdb1a1efbefa66a52
+            */
+
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Login(Dosen d)
+        {
+            if (ModelState.IsValid) //utk validasi
+            {
+                using(SimpedaEntities lecture = new SimpedaEntities())
+                {
+                    var v = lecture.Dosens.Where(a => a.NIP.Equals(d.NIP) && a.password_Dosen.Equals(d.password_Dosen)).FirstOrDefault();
+                    if (v != null)
+                    {
+                        Session["LogedUserID"] = v.NIP.ToString();
+                        Session["LogedUserPassword"] = v.password_Dosen.ToString();
+                        return RedirectToAction("AfterLogin");
+                    }
+                }
+            }
+            return View(d);
+        }
+
+        public ActionResult AfterLogin()
+        {
+            if (Session["LogedUserID"] != null)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Index");
+            }
         }
 	}
 }
