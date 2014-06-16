@@ -55,6 +55,14 @@ namespace SIMPEDA_V01Test.Controllers.Test
             CollectionAssert.Contains(model, mahasiswa2);
             CollectionAssert.Contains(model, mahasiswa3);
         }
+        [TestMethod]
+        public void Create()
+        {
+            Mahasiswa newMahasiswa = new Mahasiswa { NRP = "511110023", namaMhs = "Ika Ayu", emailMhs = "ikayu@gmail.com" };
+            controller.Create(newMahasiswa);
+
+            CollectionAssert.Contains(mahasiswa, newMahasiswa);
+        }
 
         [TestMethod]
         public void Details()
@@ -63,7 +71,7 @@ namespace SIMPEDA_V01Test.Controllers.Test
 
             Assert.AreEqual(result.Model, mahasiswa1);
         }
-
+        
         [TestMethod]
         public void Delete()
         {
