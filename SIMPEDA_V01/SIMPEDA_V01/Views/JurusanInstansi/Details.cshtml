@@ -1,0 +1,42 @@
+﻿@model SIMPEDA_V01.Models.JurusanInstansi
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>JurusanInstansi</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.namaJurusan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.namaJurusan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.alamatJurusan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.alamatJurusan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.teleponJurusan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.teleponJurusan)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idJurusan }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

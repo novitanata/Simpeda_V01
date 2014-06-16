@@ -1,0 +1,104 @@
+﻿@model SIMPEDA_V01.Models.Pegawai
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>Pegawai</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.namaPegawai)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.namaPegawai)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.jabatan)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.jabatan)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.teleponPegawai)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.teleponPegawai)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.alamatPegawai)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.alamatPegawai)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.emailPegawai)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.emailPegawai)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.poinPunishmetPegawai)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.poinPunishmetPegawai)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.barcodeImagePegawai)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.barcodeImagePegawai)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.barcodePegawai)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.barcodePegawai)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.JurusanInstansi.namaJurusan)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.JurusanInstansi.namaJurusan)
+            </dd>
+    
+        </dl>
+    
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+    
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+</body>
+</html>

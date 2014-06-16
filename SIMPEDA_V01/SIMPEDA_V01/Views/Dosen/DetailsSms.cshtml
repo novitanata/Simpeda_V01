@@ -1,0 +1,97 @@
+﻿@model SIMPEDA_V01.Models.Dosen
+
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DetailsSms</title>
+</head>
+<body>
+    <div>
+        <h4>Dosen</h4>
+    	<hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.namaDosen)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.namaDosen)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.teleponDosen)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.teleponDosen)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.alamatDosen)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.alamatDosen)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.emailDosen)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.emailDosen)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.poinPunishmentDosen)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.poinPunishmentDosen)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.barcodeImageDosen)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.barcodeImageDosen)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.barcodeDosen)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.barcodeDosen)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.JurusanInstansi.namaJurusan)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.JurusanInstansi.namaJurusan)
+            </dd>
+    
+        </dl>
+    </div>
+    <br/><br/><br/><br/>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.NIP }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+     <div class="form-group">
+     <div class="col-md-offset-2 col-md-10">
+        <input type="submit" value="Kirim SMS" class="btn btn-default" onclick="alert('SMS telah dikirim')"/>
+     </div>
+   </div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+﻿@model SIMPEDA_V01.Models.JurusanInstansi
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>JurusanInstansi</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.idJurusan, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.idJurusan)
+                @Html.ValidationMessageFor(model => model.idJurusan)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.namaJurusan, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.namaJurusan)
+                @Html.ValidationMessageFor(model => model.namaJurusan)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.alamatJurusan, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.alamatJurusan)
+                @Html.ValidationMessageFor(model => model.alamatJurusan)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.teleponJurusan, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.teleponJurusan)
+                @Html.ValidationMessageFor(model => model.teleponJurusan)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

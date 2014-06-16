@@ -1,0 +1,42 @@
+﻿@model SIMPEDA_V01.Models.Shelter
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Shelter</h4>
+    	<hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.lokasiShelter)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.lokasiShelter)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.deskripsiShelter)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.deskripsiShelter)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.idShelter }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>
