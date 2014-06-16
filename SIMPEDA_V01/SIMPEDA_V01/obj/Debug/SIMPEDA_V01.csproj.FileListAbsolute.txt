@@ -103,3 +103,30 @@ G:\hihi\net\SIMPEDA_V01\SIMPEDA_V01\bin\System.Web.Helpers.xml
 G:\hihi\net\SIMPEDA_V01\SIMPEDA_V01\bin\System.Web.Mvc.xml
 G:\hihi\net\SIMPEDA_V01\SIMPEDA_V01\obj\Debug\SIMPEDA_V01.pdb
 >>>>>>> cd300630e9d18d5bb184536fdb1a1efbefa66a52
+G:\hihi\New folder 16 juni\SIMPEDA_V01\SIMPEDA_V01\obj\Debug\SIMPEDA_V01.csprojResolveAssemblyReference.cache
+G:\hihi\New folder 16 juni\SIMPEDA_V01\SIMPEDA_V01\obj\Debug\SIMPEDA_V01.dll
+G:\hihi\New folder 16 juni\SIMPEDA_V01\SIMPEDA_V01\obj\Debug\SIMPEDA_V01.pdb
+G:\hihi\New folder 16 juni\SIMPEDA_V01\SIMPEDA_V01\bin\SIMPEDA_V01.dll
+G:\hihi\New folder 16 juni\SIMPEDA_V01\SIMPEDA_V01\bin\SIMPEDA_V01.pdb
+G:\hihi\New folder 16 juni\SIMPEDA_V01\SIMPEDA_V01\bin\Antlr3.Runtime.dll
+G:\hihi\New folder 16 juni\SIMPEDA_V01\SIMPEDA_V01\bin\EntityFramework.dll
+G:\hihi\New folder 16 juni\SIMPEDA_V01\SIMPEDA_V01\bin\EntityFramework.SqlServer.dll
+G:\hihi\New folder 16 juni\SIMPEDA_V01\SIMPEDA_V01\bin\Gma.QrCodeNet.Encoding.dll
+G:\hihi\New folder 16 juni\SIMPEDA_V01\SIMPEDA_V01\bin\Microsoft.Web.Infrastructure.dll
+G:\hihi\New folder 16 juni\SIMPEDA_V01\SIMPEDA_V01\bin\Newtonsoft.Json.dll
+G:\hihi\New folder 16 juni\SIMPEDA_V01\SIMPEDA_V01\bin\System.Web.Helpers.dll
+G:\hihi\New folder 16 juni\SIMPEDA_V01\SIMPEDA_V01\bin\System.Web.Mvc.dll
+G:\hihi\New folder 16 juni\SIMPEDA_V01\SIMPEDA_V01\bin\System.Web.Razor.dll
+G:\hihi\New folder 16 juni\SIMPEDA_V01\SIMPEDA_V01\bin\System.Web.Webpages.Deployment.dll
+G:\hihi\New folder 16 juni\SIMPEDA_V01\SIMPEDA_V01\bin\System.Web.Webpages.dll
+G:\hihi\New folder 16 juni\SIMPEDA_V01\SIMPEDA_V01\bin\System.Web.Webpages.Razor.dll
+G:\hihi\New folder 16 juni\SIMPEDA_V01\SIMPEDA_V01\bin\WebGrease.dll
+G:\hihi\New folder 16 juni\SIMPEDA_V01\SIMPEDA_V01\bin\zxing.dll
+G:\hihi\New folder 16 juni\SIMPEDA_V01\SIMPEDA_V01\bin\EntityFramework.xml
+G:\hihi\New folder 16 juni\SIMPEDA_V01\SIMPEDA_V01\bin\EntityFramework.SqlServer.xml
+G:\hihi\New folder 16 juni\SIMPEDA_V01\SIMPEDA_V01\bin\System.Web.Razor.xml
+G:\hihi\New folder 16 juni\SIMPEDA_V01\SIMPEDA_V01\bin\System.Web.Webpages.xml
+G:\hihi\New folder 16 juni\SIMPEDA_V01\SIMPEDA_V01\bin\System.Web.Webpages.Deployment.xml
+G:\hihi\New folder 16 juni\SIMPEDA_V01\SIMPEDA_V01\bin\System.Web.Webpages.Razor.xml
+G:\hihi\New folder 16 juni\SIMPEDA_V01\SIMPEDA_V01\bin\System.Web.Helpers.xml
+G:\hihi\New folder 16 juni\SIMPEDA_V01\SIMPEDA_V01\bin\System.Web.Mvc.xml
