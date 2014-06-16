@@ -1,0 +1,115 @@
+﻿
+@model SIMPEDA_V01.Models.Dosen
+@{
+    ViewBag.Title = "Login";
+}
+
+<html>
+    <head>
+       
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+        <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="~/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+        <script src="~/Scripts/modernizr-2.6.2.js"></script>
+        <title>@ViewBag.Title Peminjaman Sepeda ITS</title>
+    </head>
+    <body>
+    <section id="loginUser">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2>Login</h2>
+                        <hr class="star-primary">
+                    </div>
+                </div>
+                <br /><br />
+                <table>
+                    <tr>
+                        <td style="width:850px">
+                            <div class="code">
+                                 <div class="col-lg-8 col-lg-offset-2">
+                                     <br />
+                                        <form role="form">
+
+                                        </form>
+                                        @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+                                        { 
+                                            @Html.AntiForgeryToken() 
+                                            @Html.ValidationSummary(true)
+                                            if (@ViewBag.Message != null)
+                                            { 
+                                                <div style="border:1px solid red">
+                                                    @ViewBag.Message
+                                                </div>
+                                            }
+                                            <table>
+                                                <tr>
+                                                    <td>@Html.LabelFor(a=>a.NIP)</td>
+                                                    <td>@Html.TextBoxFor(a=>a.NIP)</td>
+                                                    <td>@Html.ValidationMessageFor(a=>a.NIP)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        @Html.LabelFor(a=>a.password_Dosen)
+                                                    </td>
+                                                    <td>
+                                                        @Html.TextBoxFor(a=>a.password_Dosen)
+                                                    </td>
+                                                    <td>
+                                                        @Html.ValidationMessageFor(a=>a.password_Dosen)
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td>
+                                                        <input type="submit" value="Login" />
+                
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                            </table>
+                                        }
+                                </div>
+                            </div>
+    
+                        </td>
+                        <td style="width:500px">
+                             <div class="row">
+                                   <div class="h3 small">
+                                        <p style="font-style:italic">
+                                        Anda Belum Punya Akun SIMPEDA ?
+                                        </p>
+                                   </div>
+                             </div>
+                              <div class="row">
+                                   <div class="h3 small">
+                                    
+                                        <p>
+                                        silahkan lakukan 
+                                        <a href style="font-size:x-large">Registrasi</a> disini
+                                        </p>
+                                  
+                                   </div>
+                                   
+                               </div>
+                              <br /><br /><br /><br /><br /><br />
+
+                          
+                        </td>
+                    </tr>
+                </table>
+               
+                
+             </div>
+     </section>
+       
+    </body>
+</html>
+
+
+
+
+

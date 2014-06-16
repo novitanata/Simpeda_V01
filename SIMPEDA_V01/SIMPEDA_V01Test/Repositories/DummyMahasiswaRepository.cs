@@ -5,12 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using SIMPEDA_V01.Models;
 
-namespace SIMPEDA_V01Test
+namespace SIMPEDA_V01Test.Repositories
 {
     class DummyMahasiswaRepository : IMahasiswaRepository
     {
         List<Mahasiswa> m_mahasiswa = null;
-
+        public DummyMahasiswaRepository(List<Mahasiswa> mahasiswas)
+        {
+            m_mahasiswa = mahasiswas;
+        }
         public List<Mahasiswa> GetAllMahasiswa()
         {
             return m_mahasiswa;
