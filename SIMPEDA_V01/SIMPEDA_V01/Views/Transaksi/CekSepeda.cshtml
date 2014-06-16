@@ -1,0 +1,44 @@
+﻿@model IEnumerable<SIMPEDA_V01.Models.Transaksi>
+@{string newid = null;
+  string url = null;}
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CekSepeda</title>
+</head>
+<body>
+          @newid;
+          @foreach (var item in @ViewBag.sepeda) {
+       <table>
+           <tr>
+               <td>
+                   @item.idSepeda
+                   @item.idPeminjamMhs
+                   @item.idPeminjamDosen
+                   @item.idPeminjamPegawai
+               </td>
+               
+               @{if (string.IsNullOrEmpty(item.idPeminjamMhs) && string.IsNullOrEmpty(item.idPeminjamDosen))
+                 { newid = item.idPeminjamPegawai; url = "Pegawai";}
+                 else if (string.IsNullOrEmpty(item.idPeminjamDosen) && string.IsNullOrEmpty(item.idPeminjamPegawai))
+                 { newid = item.idPeminjamMhs; url = "Mahasiswa";}
+                 else
+                 { newid = item.idPeminjamDosen; url = "Dosen";}
+                
+            <td>
+                <a href="@Url.Action("DetailsSms", url, new{id=newid})">Details</a>
+            </td>
+           }
+        </tr>
+      </table>
+            
+    }
+    
+</body>
+</html>

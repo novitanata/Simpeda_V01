@@ -1,0 +1,89 @@
+﻿@model IEnumerable<SIMPEDA_V01.Models.Pegawai>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.namaPegawai)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.jabatan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.teleponPegawai)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.alamatPegawai)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.emailPegawai)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.poinPunishmetPegawai)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.barcodeImagePegawai)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.barcodePegawai)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JurusanInstansi.namaJurusan)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.namaPegawai)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.jabatan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.teleponPegawai)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.alamatPegawai)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.emailPegawai)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.poinPunishmetPegawai)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.barcodeImagePegawai)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.barcodePegawai)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JurusanInstansi.namaJurusan)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.idPegawai }) |
+                @Html.ActionLink("Details", "Details", new { id=item.idPegawai }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.idPegawai })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

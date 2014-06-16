@@ -1,0 +1,106 @@
+﻿@model SIMPEDA_V01.Models.Pegawai
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DetailsSms</title>
+</head>
+<body>
+    <div>
+        <h4>Pegawai</h4>
+    	<hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.namaPegawai)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.namaPegawai)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.jabatan)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.jabatan)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.teleponPegawai)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.teleponPegawai)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.alamatPegawai)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.alamatPegawai)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.emailPegawai)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.emailPegawai)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.poinPunishmetPegawai)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.poinPunishmetPegawai)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.barcodeImagePegawai)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.barcodeImagePegawai)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.barcodePegawai)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.barcodePegawai)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.JurusanInstansi.namaJurusan)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.JurusanInstansi.namaJurusan)
+            </dd>
+    
+        </dl>
+    </div>
+    <br/><br/><br/><br/>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.idPegawai }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+
+     <div class="form-group">
+     <div class="col-md-offset-2 col-md-10">
+        <input type="submit" value="Kirim SMS" class="btn btn-default" onclick="alert('SMS telah dikirim')"/>
+     </div>
+     </div>
+
+</body>
+</html>

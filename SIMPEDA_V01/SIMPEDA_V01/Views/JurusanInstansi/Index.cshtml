@@ -1,0 +1,45 @@
+﻿@model IEnumerable<SIMPEDA_V01.Models.JurusanInstansi>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.namaJurusan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.alamatJurusan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.teleponJurusan)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.namaJurusan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.alamatJurusan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.teleponJurusan)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idJurusan }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idJurusan }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idJurusan })
+        </td>
+    </tr>
+}
+
+</table>

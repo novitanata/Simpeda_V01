@@ -10,30 +10,30 @@ using SIMPEDA_V01.Models;
 
 namespace SIMPEDA_V01.Controllers
 {
-    public class DosenController : Controller
+    public class PegawaiController : Controller
     {
         private SimpedaEntities db = new SimpedaEntities();
 
-        // GET: /Dosen/
+        // GET: /Pegawai/
         public ActionResult Index()
         {
-            var dosens = db.Dosens.Include(d => d.JurusanInstansi);
-            return View(dosens.ToList());
+            var pegawais = db.Pegawais.Include(p => p.JurusanInstansi);
+            return View(pegawais.ToList());
         }
 
-        // GET: /Dosen/Details/5
+        // GET: /Pegawai/Details/5
         public ActionResult Details(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Dosen dosen = db.Dosens.Find(id);
-            if (dosen == null)
+            Pegawai pegawai = db.Pegawais.Find(id);
+            if (pegawai == null)
             {
                 return HttpNotFound();
             }
-            return View(dosen);
+            return View(pegawai);
         }
 
         public ActionResult DetailsSms(string id)
@@ -42,94 +42,94 @@ namespace SIMPEDA_V01.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Dosen dosen = db.Dosens.Find(id);
-            if (dosen == null)
+            Pegawai pegawai = db.Pegawais.Find(id);
+            if (pegawai == null)
             {
                 return HttpNotFound();
             }
-            return View(dosen);
+            return View(pegawai);
         }
 
-        // GET: /Dosen/Create
+        // GET: /Pegawai/Create
         public ActionResult Create()
         {
             ViewBag.idJurusan = new SelectList(db.JurusanInstansis, "idJurusan", "namaJurusan");
             return View();
         }
 
-        // POST: /Dosen/Create
+        // POST: /Pegawai/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include="NIP,idJurusan,namaDosen,teleponDosen,alamatDosen,emailDosen,poinPunishmentDosen,barcodeImageDosen,barcodeDosen")] Dosen dosen)
+        public ActionResult Create([Bind(Include="idPegawai,idJurusan,namaPegawai,jabatan,teleponPegawai,alamatPegawai,emailPegawai,poinPunishmetPegawai,barcodeImagePegawai,barcodePegawai")] Pegawai pegawai)
         {
             if (ModelState.IsValid)
             {
-                db.Dosens.Add(dosen);
+                db.Pegawais.Add(pegawai);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.idJurusan = new SelectList(db.JurusanInstansis, "idJurusan", "namaJurusan", dosen.idJurusan);
-            return View(dosen);
+            ViewBag.idJurusan = new SelectList(db.JurusanInstansis, "idJurusan", "namaJurusan", pegawai.idJurusan);
+            return View(pegawai);
         }
 
-        // GET: /Dosen/Edit/5
+        // GET: /Pegawai/Edit/5
         public ActionResult Edit(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Dosen dosen = db.Dosens.Find(id);
-            if (dosen == null)
+            Pegawai pegawai = db.Pegawais.Find(id);
+            if (pegawai == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.idJurusan = new SelectList(db.JurusanInstansis, "idJurusan", "namaJurusan", dosen.idJurusan);
-            return View(dosen);
+            ViewBag.idJurusan = new SelectList(db.JurusanInstansis, "idJurusan", "namaJurusan", pegawai.idJurusan);
+            return View(pegawai);
         }
 
-        // POST: /Dosen/Edit/5
+        // POST: /Pegawai/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include="NIP,idJurusan,namaDosen,teleponDosen,alamatDosen,emailDosen,poinPunishmentDosen,barcodeImageDosen,barcodeDosen")] Dosen dosen)
+        public ActionResult Edit([Bind(Include="idPegawai,idJurusan,namaPegawai,jabatan,teleponPegawai,alamatPegawai,emailPegawai,poinPunishmetPegawai,barcodeImagePegawai,barcodePegawai")] Pegawai pegawai)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(dosen).State = EntityState.Modified;
+                db.Entry(pegawai).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.idJurusan = new SelectList(db.JurusanInstansis, "idJurusan", "namaJurusan", dosen.idJurusan);
-            return View(dosen);
+            ViewBag.idJurusan = new SelectList(db.JurusanInstansis, "idJurusan", "namaJurusan", pegawai.idJurusan);
+            return View(pegawai);
         }
 
-        // GET: /Dosen/Delete/5
+        // GET: /Pegawai/Delete/5
         public ActionResult Delete(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Dosen dosen = db.Dosens.Find(id);
-            if (dosen == null)
+            Pegawai pegawai = db.Pegawais.Find(id);
+            if (pegawai == null)
             {
                 return HttpNotFound();
             }
-            return View(dosen);
+            return View(pegawai);
         }
 
-        // POST: /Dosen/Delete/5
+        // POST: /Pegawai/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
         {
-            Dosen dosen = db.Dosens.Find(id);
-            db.Dosens.Remove(dosen);
+            Pegawai pegawai = db.Pegawais.Find(id);
+            db.Pegawais.Remove(pegawai);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

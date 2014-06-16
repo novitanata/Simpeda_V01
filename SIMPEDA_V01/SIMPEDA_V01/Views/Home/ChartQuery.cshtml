@@ -1,0 +1,23 @@
+﻿
+@{
+    Layout = null;
+}
+@foreach (var item in @ViewBag.hasil)
+{
+    <p>@item</p>;      
+}
+
+@foreach (var item in @ViewBag.hari)
+{
+    <p>@item</p>;      
+}
+
+@{
+    var myChart = new Chart(width: 600, height: 400)
+        .AddTitle("Peminjaman Per Hari")
+        .AddSeries(
+            xValue: new[] { @ViewBag.hari },
+            yValues: new[] { @ViewBag.hasil })
+        .Write();
+}
+

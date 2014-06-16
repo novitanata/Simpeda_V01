@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
+//using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
@@ -12,20 +12,7 @@ namespace SIMPEDA_V01.Controllers
 {
     public class MahasiswaController : Controller
     {
-        private ServiceMahasiswa serviceMahasiswa = null;
-
-        public MahasiswaController()
-            : this(new ServiceMahasiswa())
-        { 
-        
-        }
-
-        public MahasiswaController(ServiceMahasiswa sm)
-        {
-            this.serviceMahasiswa = sm;
-        }
         private SimpedaEntities db = new SimpedaEntities();
-
 
         // GET: /Mahasiswa/
         public ActionResult Index()
@@ -75,7 +62,7 @@ namespace SIMPEDA_V01.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include="NRP,idJurusan,namaMhs,teleponMhs,alamatMhs,emailMhs,poinPunishmentMhs")] Mahasiswa mahasiswa)
+        public ActionResult Create([Bind(Include="NRP,idJurusan,namaMhs,teleponMhs,alamatMhs,emailMhs,poinPunishmentMhs,barcodeImageMhs,barcodeMhs")] Mahasiswa mahasiswa)
         {
             if (ModelState.IsValid)
             {
@@ -109,7 +96,7 @@ namespace SIMPEDA_V01.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include="NRP,idJurusan,namaMhs,teleponMhs,alamatMhs,emailMhs,poinPunishmentMhs")] Mahasiswa mahasiswa)
+        public ActionResult Edit([Bind(Include="NRP,idJurusan,namaMhs,teleponMhs,alamatMhs,emailMhs,poinPunishmentMhs,barcodeImageMhs,barcodeMhs")] Mahasiswa mahasiswa)
         {
             if (ModelState.IsValid)
             {
@@ -154,11 +141,6 @@ namespace SIMPEDA_V01.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
-        }
-
-        public void Delete(int p)
-        {
-            throw new NotImplementedException();
         }
     }
 }
