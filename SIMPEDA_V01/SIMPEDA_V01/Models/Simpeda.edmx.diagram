@@ -20,7 +20,7 @@
         <AssociationConnector Association="SimpedaModel.FK_Transaksi_Pegawai" ManuallyRouted="false" />
         <AssociationConnector Association="SimpedaModel.FK_Sepeda_Shelter" ManuallyRouted="false" />
         <AssociationConnector Association="SimpedaModel.FK_Transaksi_Sepeda" ManuallyRouted="false" />
-      </Diagram>
+        </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>

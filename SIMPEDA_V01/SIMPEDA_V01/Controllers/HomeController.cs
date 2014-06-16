@@ -16,12 +16,12 @@ using System.Web.Mvc;
 using SIMPEDA_V01.Models;
 
 
-namespace SIMPEDA_V01.Controllers   
+namespace SIMPEDA_V01.Controllers
 {
     public class HomeController : Controller
     {
         private SimpedaEntities db = new SimpedaEntities();
-        
+
         //
         // GET: /Home/
         public ActionResult Index()
@@ -31,7 +31,7 @@ namespace SIMPEDA_V01.Controllers
             ViewBag.Pengembalian = "Pengembalian";
             return View();
         }
-<<<<<<< HEAD
+
         public void Capture()
         {
             var stream = Request.InputStream;
@@ -46,47 +46,48 @@ namespace SIMPEDA_V01.Controllers
 
         private byte[] String_To_Bytes2(string strInput)
         {
-            int numBytes = (strInput.Length) / 2;
+            int numBytes = (strInput.Length)/2;
             byte[] bytes = new byte[numBytes];
 
             for (int x = 0; x < numBytes; ++x)
             {
-                bytes[x] = Convert.ToByte(strInput.Substring(x * 2, 2), 16);
+                bytes[x] = Convert.ToByte(strInput.Substring(x*2, 2), 16);
             }
 
             return bytes;
-=======
+        }
 
         //protected void Page_Load(object sender, EventArgs e)
-        //{ 
-        
-        //}
+            //{ 
 
-        //protected void btnMasuk_Click(object sender, EventArgs e)
-        //{ 
-            
-        //}
-        //protected void Login1_LoggingIn(object sender, LoginCancelEventArgs e)
-        //{
-        //    //Check to see if the current user exists
-        //    if (Membership.GetUser() != null)
-        //    {
-        //        //Check to see if the user is currently locked out
-        //        if (Membership.GetUser(Login1.UserName).IsLockedOut)
-        //        {
-        //            //Get the last lockout  date from the user
-        //            DateTime lastLockout = Membership.GetUser(Login1.UserName).LastLockoutDate;
-        //            //Calculate the time the user should be unlocked
-        //            DateTime unlockDate = lastLockout.AddMinutes(Membership.PasswordAttemptWindow);
+            //}
 
-        //            //Check to see if it is time to unlock the user
-        //            //if (DateTime.Now > unlockDate)
-        //            //    Membership.GetUser(Login1.UserName).UnlockUser();
-        //        }
-        //    }
-        //}
-       // public virtual bool IsLockedOut { get; }
-        public bool ValidateUser(string idUser, string passwordUser)
+            //protected void btnMasuk_Click(object sender, EventArgs e)
+            //{ 
+
+            //}
+            //protected void Login1_LoggingIn(object sender, LoginCancelEventArgs e)
+            //{
+            //    //Check to see if the current user exists
+            //    if (Membership.GetUser() != null)
+            //    {
+            //        //Check to see if the user is currently locked out
+            //        if (Membership.GetUser(Login1.UserName).IsLockedOut)
+            //        {
+            //            //Get the last lockout  date from the user
+            //            DateTime lastLockout = Membership.GetUser(Login1.UserName).LastLockoutDate;
+            //            //Calculate the time the user should be unlocked
+            //            DateTime unlockDate = lastLockout.AddMinutes(Membership.PasswordAttemptWindow);
+
+            //            //Check to see if it is time to unlock the user
+            //            //if (DateTime.Now > unlockDate)
+            //            //    Membership.GetUser(Login1.UserName).UnlockUser();
+            //        }
+            //    }
+            //}
+            // public virtual bool IsLockedOut { get; }
+
+            /*  public bool ValidateUser(string idUser, string passwordUser)
         {
             bool ret = false;
             try
@@ -119,7 +120,6 @@ namespace SIMPEDA_V01.Controllers
             }
 
             return ret;
->>>>>>> cd300630e9d18d5bb184536fdb1a1efbefa66a52
+        }*/
         }
-	}
-}
+    }

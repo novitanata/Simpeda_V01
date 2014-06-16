@@ -29,6 +29,7 @@ namespace SIMPEDA_V01.Models
         public Nullable<int> poinPunishmetPegawai { get; set; }
         public string barcodeImagePegawai { get; set; }
         public string barcodePegawai { get; set; }
+        public string password_Pegawai { get; set; }
     
         public virtual JurusanInstansi JurusanInstansi { get; set; }
         public virtual ICollection<Transaksi> Transaksis { get; set; }
