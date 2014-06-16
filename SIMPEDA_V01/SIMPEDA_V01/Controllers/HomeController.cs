@@ -119,6 +119,7 @@ namespace SIMPEDA_V01.Controllers
             return View();
         }
 
+        //Login Dosen
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Login(Dosen d)
@@ -138,7 +139,7 @@ namespace SIMPEDA_V01.Controllers
             }
             return View(d);
         }
-
+        
         public ActionResult AfterLogin()
         {
             if (Session["LogedUserID"] != null)
@@ -150,5 +151,46 @@ namespace SIMPEDA_V01.Controllers
                 return RedirectToAction("Index");
             }
         }
+
+        //Login Mahasiswa
+        public ActionResult Loginmhs(Mahasiswa m)
+        {
+            if (ModelState.IsValid) //utk validasi
+            {
+                using (SimpedaEntities mhs = new SimpedaEntities())
+                {
+                    var vi = mhs.Mahasiswas.Where(b=> b.NRP.Equals(m.NRP) && b.password_Mhs.Equals(m.password_Mhs)).FirstOrDefault();
+                    if (vi != null)
+                    {
+                        Session["LogedUserID"] = vi.NRP.ToString();
+                        Session["LogedUserPassword"] = vi.password_Mhs.ToString();
+                        return RedirectToAction("AfterLogin");
+                    }
+                }
+            }
+            return View("Loginmhs",m);
+        }
+
+        //Login Pegawai
+        public ActionResult Logipeg(Pegawai p)
+        {
+            if (ModelState.IsValid) //utk validasi
+            {
+                using (SimpedaEntities peg = new SimpedaEntities())
+                {
+                    var vii = peg.Pegawais.Where(c => c.idPegawai.Equals(p.idPegawai) && c.idPegawai.Equals(p.password_Pegawai)).FirstOrDefault();
+                    if (vii != null)
+                    {
+                        Session["LogedUserID"] = vii.idPegawai.ToString();
+                        Session["LogedUserPassword"] = vii.password_Pegawai.ToString();
+                        return RedirectToAction("AfterLogin");
+                    }
+                }
+            }
+            return View("Logipeg",p);
+        }
+
+        
+
 	}
 }
