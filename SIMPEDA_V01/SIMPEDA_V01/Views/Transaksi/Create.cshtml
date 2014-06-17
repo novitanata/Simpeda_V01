@@ -23,12 +23,36 @@
                 @Html.ValidationMessageFor(model => model.idTransaksi)
             </div>
         </div>
+        
+        <div class="form-group">
+            @Html.LabelFor(model => model.idPeminjamMhs, "idPeminjamMhs", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.idPeminjamMhs,new { @Value=ViewBag.idPeminjamMhs, @readonly = "true"})
+                @Html.ValidationMessageFor(model => model.idPeminjamMhs)
+            </div>
+        </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.idPeminjamMhs, "idPeminjamMhs", new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("idPeminjamMhs", String.Empty)
+                @Html.TextBoxFor(model => model.idPeminjamMhs,new { @Value=ViewBag.idPeminjamMhs, @readonly = "true"})
                 @Html.ValidationMessageFor(model => model.idPeminjamMhs)
+            </div>
+        </div>
+        
+         <div class="form-group">
+            @Html.LabelFor(model => model.idPeminjamPegawai, "idPeminjamPegawai", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+               @Html.TextBoxFor(model => model.idPeminjamPegawai,new { @Value=ViewBag.idPeminjamPeg, @readonly = "true"})
+               @Html.ValidationMessageFor(model => model.idPeminjamPegawai)
+            </div>
+        </div>
+        
+        <div class="form-group">
+            @Html.LabelFor(model => model.idPeminjamDosen, "idPeminjamDosen", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+               @Html.TextBoxFor(model => model.idPeminjamDosen,new { @Value=ViewBag.idPeminjamDosen, @readonly = "true"})
+               @Html.ValidationMessageFor(model => model.idPeminjamDosen)
             </div>
         </div>
 
@@ -43,7 +67,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.waktuPinjam, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.TextBoxFor(model => model.waktuPinjam, new { @Value=ViewBag.tanggal})
+                @Html.TextBoxFor(model => model.waktuPinjam, new { @Value=ViewBag.tanggal, @readonly = "true"})
                 @Html.ValidationMessageFor(model => model.waktuPinjam)
             </div>
         </div>
@@ -65,7 +89,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.shelterKembali, new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.shelterKembali, new { @class = "control-label col-md-2", @readonly = "true" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.shelterKembali)
                 @Html.ValidationMessageFor(model => model.shelterKembali)

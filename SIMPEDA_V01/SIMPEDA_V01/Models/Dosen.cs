@@ -11,7 +11,6 @@ namespace SIMPEDA_V01.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
     
     public partial class Dosen
     {
@@ -19,13 +18,9 @@ namespace SIMPEDA_V01.Models
         {
             this.Transaksis = new HashSet<Transaksi>();
         }
-        
-        [Required(ErrorMessage="Silakan lengkapi NIP Anda", AllowEmptyStrings=false)]
+    
         public string NIP { get; set; }
         public int idJurusan { get; set; }
-        [Required(ErrorMessage="Silakan masukkan password akun Anda", AllowEmptyStrings=false)]
-        [DataType(System.ComponentModel.DataAnnotations.DataType.Password)]
-        public string password_Dosen { get; set; }
         public string namaDosen { get; set; }
         public string teleponDosen { get; set; }
         public string alamatDosen { get; set; }

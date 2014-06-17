@@ -1,83 +1,73 @@
 ﻿@model IEnumerable<SIMPEDA_V01.Models.Transaksi>
 
 @{
-    Layout = null;
+    ViewBag.Title = "Index";
+}
+<br/>
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.waktuPinjam)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.waktuKembali)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.shelterKembali)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Dosen.namaDosen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mahasiswa.namaMhs)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pegawai.namaPegawai)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sepeda.merkSepeda)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.waktuPinjam)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.waktuKembali)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.shelterKembali)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dosen.namaDosen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mahasiswa.namaMhs)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pegawai.namaPegawai)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sepeda.merkSepeda)
+        </td>
+        <td>     
+            @Html.ActionLink("Details", "Details", new { id=item.idTransaksi })       
+        </td>
+    </tr>
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <p>
-        @Html.ActionLink("Create New", "Create")
-    </p>
-    <table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.waktuPinjam)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.waktuKembali)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.status)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.shelterKembali)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Dosen.namaDosen)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Mahasiswa.namaMhs)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Pegawai.namaPegawai)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Sepeda.merkSepeda)
-            </th>
-            <th></th>
-        </tr>
-    
-    @foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.waktuPinjam)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.waktuKembali)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.status)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.shelterKembali)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Dosen.namaDosen)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Mahasiswa.namaMhs)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Pegawai.namaPegawai)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Sepeda.merkSepeda)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.idTransaksi }) |
-                @Html.ActionLink("Details", "Details", new { id=item.idTransaksi }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.idTransaksi })
-            </td>
-        </tr>
-    }
-    
-    </table>
-</body>
-</html>
+</table>

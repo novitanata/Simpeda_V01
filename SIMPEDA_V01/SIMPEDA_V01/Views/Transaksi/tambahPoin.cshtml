@@ -1,27 +1,48 @@
 ﻿
 @{
-    Layout = null;
+    ViewBag.Title = "tambahPoin";
 }
+
+<br/><br/><br/>
+<Center>
+<h2>Tambah Poin Punisment</h2>
+</Center>
+
 
 <!DOCTYPE html>
 
 <html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>tambahPoin</title>
-</head>
-<body>
-       @foreach (var item in @ViewBag.cek) {
-       <table>
-           <tr>
-               <td>
-                   @item.idSepeda
-                   @item.idPeminjamMhs
-                   @item.idPeminjamDosen
-                   @item.idPeminjamPegawai
-               </td>
-               </tr>
-           </table>
-       }
-</body>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+    </head>
+   
+    <body>
+        <table class="table">
+            <tr>
+                <th>
+                    Id Sepeda
+                </th>
+                <th>
+                    Id Mahasiswa
+                </th>
+                <th>
+                    Id Dosen
+                </th>
+            <th>
+                Id Pegawai
+            </th>
+                 </tr>
+        @foreach (var item in @ViewBag.cek) {
+                <tr>
+                    <td>
+                        @item.idSepeda
+                        @item.idPeminjamMhs
+                        @item.idPeminjamDosen
+                        @item.idPeminjamPegawai
+                    </td>
+                </tr>
+            
+        }
+        </table>
+    </body>
 </html>

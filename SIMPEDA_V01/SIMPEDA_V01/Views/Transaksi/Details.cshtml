@@ -3,13 +3,20 @@
 @{
     ViewBag.Title = "Details";
 }
-
+<br/><br/>
 <h2>Details</h2>
 
 <div>
     <h4>Transaksi</h4>
 	<hr />
     <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.idTransaksi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idTransaksi)
+        </dd>
         <dt>
             @Html.DisplayNameFor(model => model.waktuPinjam)
         </dt>
@@ -73,17 +80,11 @@
         <dd>
             @Html.DisplayFor(model => model.Sepeda.merkSepeda)
         </dd>
-<<<<<<< HEAD
         
         <dd>
-           <img src="/Transaksi/BarcodeImage?BarcodeText=@ViewBag.newId" />
+            <img src="/Transaksi/BarcodeImage?BarcodeText=@ViewBag.newId" />
         </dd>
 
-=======
-		<dd>
-           <img src="/Transaksi/BarcodeImage?barcodeText=@ViewBag.newId" />
-        </dd>
->>>>>>> cd300630e9d18d5bb184536fdb1a1efbefa66a52
     </dl>
 </div>
 <p>
