@@ -44,7 +44,7 @@
                             <a href="#portfolio">Peminjaman</a>
                         </li>
                         <li class="page-scroll">
-                            <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal"">Login</a>
+                            <a href="#loginUser">Login</a>
                         </li>
                         <li class="page-scroll">
                             <a href="#contact">Kontak</a>
@@ -155,7 +155,7 @@
             </div>
         </section>
 
-        <section id="loginUser">
+         <section id="loginUser">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
@@ -164,66 +164,53 @@
                     </div>
                 </div>
                 <br /><br />
-                <table>
-                    <tr>
-                        <td style="width:850px">
-                            <div class="code">
-                                 <div class="col-lg-8 col-lg-offset-2">
-                                    <form role="form">
-                                        <div class="row">
-                                            <div class="form-group col-xs-12 floating-label-form-group">
-                                                <label for="name">ID</label>
-                                                <input class="form-control" type="number" id="idUser" name="idUser" placeholder="NIP/NRP/No Pegawai">
-                                            </div>
+                 <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                           
+                            <div class="col-sm-4 portfolio-item">
+                                <a href="@Url.Action("Login","Home")" class="portfolio-link" data-toggle="modal">
+                                    <div class="caption">
+                                        <div class="caption-content">
+                                            
+                                            Dosen
                                         </div>
-                                        <div class="row">
-                                            <div class="form-group col-xs-12 floating-label-form-group">
-                                                <label for="email">Kata Sandi</label>
-                                                <input class="form-control" type="password" id="passwordUser" name="passwordUser" placeholder="Password" accesskey="passwordUser.Text">
-                                            </div>
-                                        </div>
-                            
-                                        <br>
-                                        <div class="row">
-                                            <div class="form-group col-xs-12">
-                                                <button type="submit" class="btn btn-lg btn-success" id="btnMasuk" name="btnMasuk" accesskey="btnMasuk_Click">Masuk</button>
-                                    
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
+                                    </div>
+                                    <img src="~/img/dosen.jpg" class="img-responsive" alt="" />
+                                </a>
                             </div>
-    
-                        </td>
-                        <td style="width:500px">
-                             <div class="row">
-                                   <div class="h3 small">
-                                        <p style="font-style:italic">
-                                        Anda Belum Punya Akun SIMPEDA ?
-                                        </p>
-                                   </div>
-                             </div>
-                              <div class="row">
-                                   <div class="h3 small">
-                                    
-                                        <p>
-                                        silahkan lakukan 
-                                        <a href="#" style="font-size:x-large">Registrasi</a> disini
-                                        </p>
-                                  
-                                   </div>
-                                   
-                               </div>
-                              <br /><br /><br /><br /><br /><br />
-
-                          
-                        </td>
-                    </tr>
-                </table>
-               
-                
+                            <div class="col-sm-4 portfolio-item">
+                                <a href="@Url.Action("Loginmhs","Home")" class="portfolio-link" data-toggle="modal">
+                                    <div class="caption">
+                                        <div class="caption-content">
+                                            
+                                            Mahasiswa
+                                        </div>
+                                    </div>
+                                    <img src="~/img/mhs.jpg" class="img-responsive" alt="" />
+                                </a>
+                            </div>
+                            <div class="col-sm-4 portfolio-item">
+                                <a href="@Url.Action("Logipeg","Home")" class="portfolio-link" data-toggle="modal">
+                                    <div class="caption">
+                                        <div class="caption-content">
+                                            
+                                            Pegawai
+                                        </div>
+                                    </div>
+                                    <img src="~/img/pegawai.jpg" class="img-responsive" alt="" />
+                                </a>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                <br /><br />
+                <center>
+                    <a href="#portfolioModal2" style="font-size:x-large" class="portfolio-link" data-toggle="modal">Registrasi</a>
+                </center>
              </div>
      </section>
+
 
         <section id="contact">
             <footer class="text-center">
@@ -269,26 +256,22 @@
             </footer>
         </section>
 
-        <!-- Portfolio Modals -->
-        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
+        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
                     </div>
                 </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 col-lg-offset-2">
-                            <div class="modal-body">
-                                <h2>SIMPEDA</h2>
-                                <hr class="star-primary">
-                                <img src="img/portfolio/cabin.png" class="img-responsive img-centered" alt="">
-                                <p>Sistem Informasi Peminjaman Sepeda ITS</p>
-                                                            
-                            </div>
-                            <div class="col-sm-4 portfolio-item">
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>resgistrasi</h2>
+                            <hr class="star-primary">
+                            <p>Silahkan registrasi sesuai profile Anda</p>
+                             <div class="col-sm-4 portfolio-item">
                                 <a href="@Url.Action("Login","Home")" class="portfolio-link" data-toggle="modal">
                                     <div class="caption">
                                         <div class="caption-content">
@@ -296,7 +279,7 @@
                                             Dosen
                                         </div>
                                     </div>
-                                    <img src="~/img/dosen.png" class="img-responsive" alt="" />
+                                    <img src="~/img/dosen.jpg" class="img-responsive" alt="" />
                                 </a>
                             </div>
                             <div class="col-sm-4 portfolio-item">
@@ -307,7 +290,7 @@
                                             Mahasiswa
                                         </div>
                                     </div>
-                                    <img src="~/img/mhs.png" class="img-responsive" alt="" />
+                                    <img src="~/img/mhs.jpg" class="img-responsive" alt="" />
                                 </a>
                             </div>
                             <div class="col-sm-4 portfolio-item">
@@ -318,20 +301,20 @@
                                             Pegawai
                                         </div>
                                     </div>
-                                    <img src="~/img/pegawai.png" class="img-responsive" alt="" />
+                                    <img src="~/img/pegawai.jpg" class="img-responsive" alt="" />
                                 </a>
                             </div>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>Keluar</button>
+                            
+
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
-                    <div class="row">
-                
-            </div>
                 </div>
-                 
             </div>
         </div>
-
+    </div>
+       
+        
         <script src="~/Scripts/jquery-1.10.2.min.js"></script>
         <script src="~/Scripts/bootstrap.min.js"></script>
         <script src="~/Scripts/classie.js"></script>

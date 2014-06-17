@@ -38,7 +38,6 @@ namespace SIMPEDA_V01.Controllers
 
         public ActionResult ChartQuery()
         {
-<<<<<<< HEAD
             int numBytes = (strInput.Length)/2;
             byte[] bytes = new byte[numBytes];
 
@@ -49,8 +48,82 @@ namespace SIMPEDA_V01.Controllers
 
             return bytes;
         }
-<<<<<<< HEAD
 
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+        //Login Dosen
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Login(Dosen d)
+        {
+            if (ModelState.IsValid) //utk validasi
+            {
+                using(SimpedaEntities lecture = new SimpedaEntities())
+                {
+                    var v = lecture.Dosens.Where(a => a.NIP.Equals(d.NIP) && a.password_Dosen.Equals(d.password_Dosen)).FirstOrDefault();
+                    if (v != null)
+                    {
+                        Session["LogedUserID"] = v.NIP.ToString();
+                        Session["LogedUserPassword"] = v.password_Dosen.ToString();
+                        return RedirectToAction("AfterLogin");
+                    }
+                }
+            }
+            return View(d);
+        }
+        
+        public ActionResult AfterLogin()
+        {
+            if (Session["LogedUserID"] != null)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Index");
+            }
+        }
+
+        //Login Mahasiswa
+        public ActionResult Loginmhs(Mahasiswa m)
+        {
+            if (ModelState.IsValid) //utk validasi
+            {
+                using (SimpedaEntities mhs = new SimpedaEntities())
+                {
+                    var vi = mhs.Mahasiswas.Where(b=> b.NRP.Equals(m.NRP) && b.password_Mhs.Equals(m.password_Mhs)).FirstOrDefault();
+                    if (vi != null)
+                    {
+                        Session["LogedUserID"] = vi.NRP.ToString();
+                        Session["LogedUserPassword"] = vi.password_Mhs.ToString();
+                        return RedirectToAction("AfterLogin");
+                    }
+                }
+            }
+            return View("Loginmhs",m);
+        }
+
+        //Login Pegawai
+        public ActionResult Logipeg(Pegawai p)
+        {
+            if (ModelState.IsValid) //utk validasi
+            {
+                using (SimpedaEntities peg = new SimpedaEntities())
+                {
+                    var vii = peg.Pegawais.Where(c => c.idPegawai.Equals(p.idPegawai) && c.idPegawai.Equals(p.password_Pegawai)).FirstOrDefault();
+                    if (vii != null)
+                    {
+                        Session["LogedUserID"] = vii.idPegawai.ToString();
+                        Session["LogedUserPassword"] = vii.password_Pegawai.ToString();
+                        return RedirectToAction("AfterLogin");
+                    }
+                }
+            }
+            return View("Logipeg",p);
+        }
         //protected void Page_Load(object sender, EventArgs e)
             //{ 
 
@@ -174,38 +247,11 @@ namespace SIMPEDA_V01.Controllers
         }
 
         
-<<<<<<< HEAD
-        public ActionResult AfterLogin()
-        {
-            if (Session["LogedUserID"] != null)
-            {
-                return View();
-            }
-            else
-            {
-                return RedirectToAction("Index");
-            }
->>>>>>> d8a4c637197c3a321eaf845767b825745435af91
-        }
-<<<<<<< HEAD
+
     }
 =======
 
-        //Login Mahasiswa
-        public ActionResult Loginmhs(Mahasiswa m)
-=======
-        public void Capture()
->>>>>>> 3ec78cc176648fd33130980b6c01ab043d878107
-        {
-            var stream = Request.InputStream;
-                    string dump;
- 
-            using (var reader = new StreamReader(stream))
-            dump = reader.ReadToEnd();
- 
-            var path = Server.MapPath("~/test.jpg");
-            System.IO.File.WriteAllBytes(path, String_To_Bytes2(dump));
-        }
+        
  
         private byte[] String_To_Bytes2(string strInput)
         {
@@ -221,4 +267,4 @@ namespace SIMPEDA_V01.Controllers
         }
 	}
 }
->>>>>>> f643e476d8fa832a27279a4b2a2be56f6c21e95b
+

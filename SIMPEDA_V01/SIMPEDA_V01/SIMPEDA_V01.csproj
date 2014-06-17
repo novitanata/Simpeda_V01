@@ -272,6 +272,10 @@
     <Content Include="Views\Transaksi\Edit.cshtml" />
     <Content Include="Views\Transaksi\Index.cshtml" />
     <Content Include="Views\Transaksi\ScanBarcode.cshtml" />
+    <Content Include="Views\Home\AfterLogin.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Home\Loginmhs.cshtml" />
+    <Content Include="Views\Home\Logipeg.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
