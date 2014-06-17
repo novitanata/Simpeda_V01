@@ -146,6 +146,9 @@
     <Content Include="font-awesome\scss\_spinning.scss" />
     <Content Include="font-awesome\scss\_stacked.scss" />
     <Content Include="font-awesome\scss\_variables.scss" />
+    <Content Include="img\dosen.jpg" />
+    <Content Include="img\mhs.jpg" />
+    <Content Include="img\pegawai.jpg" />
     <Content Include="Models\Simpeda.edmx.sql" />
     <Content Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -186,6 +189,7 @@
     <Compile Include="Models\Dosen.cs">
       <DependentUpon>Simpeda.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ITransaksisRepository.cs" />
     <Compile Include="Models\JurusanInstansi.cs">
       <DependentUpon>Simpeda.tt</DependentUpon>
     </Compile>
@@ -198,6 +202,7 @@
     <Compile Include="Models\Sepeda.cs">
       <DependentUpon>Simpeda.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ServiceTransaksi.cs" />
     <Compile Include="Models\Shelter.cs">
       <DependentUpon>Simpeda.tt</DependentUpon>
     </Compile>
@@ -219,6 +224,7 @@
     <Compile Include="Models\Transaksi.cs">
       <DependentUpon>Simpeda.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\TransaksisRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
